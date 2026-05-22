@@ -21,7 +21,7 @@ export default function FeaturedSection() {
             Author Spotlight 2026
           </h3>
           <p className="text-on-surface-variant mb-6">
-            Exclusive conversations with top authors in E_BOOK_STORE.
+            Exclusive conversations with top authors in BrainHub.
           </p>
           <Link href="/browse" className="bg-primary text-on-primary px-6 py-3 rounded hover:scale-105 transition">
             Read Feature →
