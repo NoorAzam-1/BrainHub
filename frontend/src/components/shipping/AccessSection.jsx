@@ -18,11 +18,11 @@ export default function AccessSection() {
 
   return (
     <section className="mx-auto my-5 md:my-10">
-      <div className="grid md:grid-cols-2 rounded-2xl overflow-hidden shadow-lg">
+      <div className="grid md:grid-cols-2 rounded-3xl overflow-hidden shadow-2xl shadow-black/10 border border-white/60">
 
         {/* LEFT SIDE */}
-        <div className="bg-surface-container-high p-6 md:p-12">
-          <h3 className="text-3xl font-bold mb-10">
+        <div className="glass-card p-6 md:p-12">
+          <h3 className="text-3xl font-bold mb-10 text-on-surface">
             Accessing Your Purchase
           </h3>
 
@@ -31,7 +31,7 @@ export default function AccessSection() {
               <div key={i} className="flex items-start gap-4 group">
                 
                 {/* Step Number */}
-                <div className="w-12 min-w-12 h-12 flex items-center justify-center rounded-xl bg-primary text-black font-bold text-lg shadow-md group-hover:scale-105 transition">
+                <div className="w-12 min-w-12 h-12 flex items-center justify-center rounded-2xl bg-linear-to-r from-primary to-accent text-black font-bold text-lg shadow-md shadow-primary/20 group-hover:scale-105 transition">
                   {i + 1}
                 </div>
 
@@ -50,11 +50,11 @@ export default function AccessSection() {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="bg-linear-to-br from-primary/20 to-secondary/20 flex items-center justify-center p-6 md:p-8">
+        <div className="bg-linear-to-br from-primary/15 via-secondary/10 to-accent/10 flex items-center justify-center p-6 md:p-8">
           
-          <div className="bg-on-tertiary-fixed-variant backdrop-blur-md p-8 rounded-2xl shadow-xl w-full max-w-sm text-center">
+          <div className="glass-card p-8 rounded-3xl shadow-xl w-full max-w-sm text-center border border-white/60">
 
-            <h4 className="text-xl font-semibold mb-4 text-primary">
+            <h4 className="text-xl font-semibold mb-4 text-on-surface">
               Ready to start reading?
             </h4>
 
@@ -62,7 +62,7 @@ export default function AccessSection() {
               Access your books instantly and enjoy seamless reading across devices.
             </p>
 
-            <Link href="/browse" className="w-full bg-primary text-black py-3 px-4 rounded-lg font-semibold hover:opacity-90 transition cursor-pointer">
+            <Link href="/browse" className="btn btn-primary w-full py-3 px-4 rounded-2xl font-semibold hover:opacity-90 transition cursor-pointer">
               Start Reading
             </Link>
 
