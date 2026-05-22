@@ -1,5 +1,5 @@
 export const site = {
-  brand: "E_BOOK_STORE",
+  brand: "BrainHub",
   hero: {
     badge: "Book of the Month",
     title: "The Midnight Stargazer",
