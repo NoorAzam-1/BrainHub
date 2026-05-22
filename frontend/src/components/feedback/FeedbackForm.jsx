@@ -39,27 +39,27 @@ export default function FeedbackForm({ editData, setEditData }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className=" p-4 shadow rounded mb-6">
-      <h2 className="text-xl font-bold mb-4">
+    <form onSubmit={handleSubmit} className="glass-card p-5 md:p-6 rounded-3xl border border-white/60 mb-6">
+      <h2 className="text-xl font-bold mb-4 text-on-surface">
         {editData ? "Edit Feedback" : "Add Feedback"}
       </h2>
 
       <input
-        className="border p-2 w-full mb-2"
+        className="input mb-3"
         placeholder="Name"
         value={form.name}
         onChange={(e) => setForm({ ...form, name: e.target.value })}
       />
 
       <input
-        className="border p-2 w-full mb-2"
+        className="input mb-3"
         placeholder="Email"
         value={form.email}
         onChange={(e) => setForm({ ...form, email: e.target.value })}
       />
 
       <input
-        className="border p-2 w-full mb-2"
+        className="input mb-3"
         placeholder="Contact No"
         value={form.contactNo}
         onChange={(e) =>
@@ -68,7 +68,7 @@ export default function FeedbackForm({ editData, setEditData }) {
       />
 
       <textarea
-        className="border p-2 w-full mb-2"
+        className="input mb-3 min-h-28"
         placeholder="Feedback"
         value={form.feedback}
         onChange={(e) =>
@@ -76,7 +76,7 @@ export default function FeedbackForm({ editData, setEditData }) {
         }
       />
 
-      <button className="bg-blue-500 text-white px-4 py-2 rounded">
+      <button className="btn btn-primary px-4 py-2 rounded-2xl">
         {editData ? "Update" : "Submit"}
       </button>
     </form>
