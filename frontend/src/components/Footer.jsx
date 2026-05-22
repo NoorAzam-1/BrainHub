@@ -22,7 +22,7 @@ export default function Footer() {
         </div>
 
         <div className="text-xs md:text-sm leading-relaxed text-on-surface/30">
-          © 2026 E_BOOK_STORE
+          © 2026 @ {site.brand}
         </div>
       </div>
     </footer>
