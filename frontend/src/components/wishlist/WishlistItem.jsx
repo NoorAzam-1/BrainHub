@@ -35,10 +35,10 @@ export default function WishlistItem({
 
   return (
     <>
-      <div className="group relative flex flex-col md:flex-row gap-6 p-4 rounded-xl border border-white/5 bg-surface-container-low backdrop-blur-lg hover:border-primary/20 transition">
+      <div className="group relative flex flex-col md:flex-row gap-6 p-4 rounded-3xl glass-card border border-white/8 hover:border-primary/20 transition shadow-2xl shadow-black/15">
         
         {/* Image */}
-        <div className="relative w-full md:w-40 aspect-2/3 overflow-hidden rounded-lg shadow-xl shrink-0">
+        <div className="relative w-full md:w-40 aspect-2/3 overflow-hidden rounded-2xl shadow-xl shrink-0 border border-white/10">
           <Image
             alt="Image"
             src={image || "/placeholder.png"}
@@ -53,7 +53,7 @@ export default function WishlistItem({
           {/* Top */}
           <div className="flex justify-between items-start">
             <div>
-              <h3 className="text-xl md:text-2xl font-headline font-bold group-hover:text-primary">
+              <h3 className="text-xl md:text-2xl font-headline font-bold text-on-surface group-hover:text-primary">
                 {title}
               </h3>
               <p className="text-sm text-on-surface-variant">{author}</p>
@@ -83,7 +83,7 @@ export default function WishlistItem({
             <button
               onClick={handleMoveToCart}
               disabled={loading}
-              className="bg-linear-to-r from-primary to-primary-container text-on-primary px-6 py-3 rounded-md font-bold flex items-center gap-2 hover:scale-[1.03] active:scale-95 transition cursor-pointer"
+              className="btn btn-primary px-6 py-3 font-bold flex items-center gap-2 hover:scale-[1.03] active:scale-95 transition cursor-pointer"
             >
               {loading ? "Moving..." : "🛒 Move to Cart"}
             </button>
@@ -93,7 +93,7 @@ export default function WishlistItem({
 
       {/* ✅ TOAST */}
       {toast && (
-        <div className="fixed bottom-6 right-6 bg-black text-white px-4 py-2 rounded-lg shadow-lg z-50">
+        <div className="fixed bottom-6 right-6 glass-card text-on-surface px-4 py-2 rounded-xl shadow-lg z-50">
           {toast}
         </div>
       )}
