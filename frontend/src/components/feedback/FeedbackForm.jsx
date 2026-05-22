@@ -44,39 +44,48 @@ export default function FeedbackForm({ editData, setEditData }) {
         {editData ? "Edit Feedback" : "Add Feedback"}
       </h2>
 
+      <label className="label">Name</label>
       <input
         className="input mb-3"
         placeholder="Name"
         value={form.name}
+        required
         onChange={(e) => setForm({ ...form, name: e.target.value })}
       />
 
+      <label className="label">Email</label>
       <input
         className="input mb-3"
         placeholder="Email"
         value={form.email}
+        required
+        type="email"
         onChange={(e) => setForm({ ...form, email: e.target.value })}
       />
 
+      <label className="label">Contact Number</label>
       <input
         className="input mb-3"
         placeholder="Contact No"
         value={form.contactNo}
+        required
         onChange={(e) =>
           setForm({ ...form, contactNo: e.target.value })
         }
       />
 
+      <label className="label">Your Feedback</label>
       <textarea
         className="input mb-3 min-h-28"
         placeholder="Feedback"
         value={form.feedback}
+        required
         onChange={(e) =>
           setForm({ ...form, feedback: e.target.value })
         }
       />
 
-      <button className="btn btn-primary px-4 py-2 rounded-2xl">
+      <button className="btn btn-primary px-5 py-3 rounded-2xl w-full sm:w-auto">
         {editData ? "Update" : "Submit"}
       </button>
     </form>
