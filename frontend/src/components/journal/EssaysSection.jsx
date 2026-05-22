@@ -37,16 +37,16 @@ const essays = [
 export default function EssaysSection() {
   return (
     <section>
-      <h2 className="text-3xl font-bold mb-10">Literary Essays (2026)</h2>
+      <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-10">Literary Essays (2026)</h2>
 
-      <div className="space-y-8 md:space-y-16">
+      <div className="space-y-6 sm:space-y-8 md:space-y-16">
         {essays.map((essay, i) => (
           <Link href="/browse"
             key={i}
-            className="flex flex-col md:flex-row gap-8 group border-b border-white/5 pb-10"
+            className="flex flex-col md:flex-row gap-5 sm:gap-8 group border-b border-border/30 pb-8 sm:pb-10"
           >
             {/* Image */}
-            <div className="relative w-full md:w-1/3 h-[250px] md:h-[220px] overflow-hidden rounded-lg">
+            <div className="relative w-full md:w-1/3 h-[220px] sm:h-[240px] md:h-[220px] overflow-hidden rounded-2xl">
               <Image
                 src={essay.image}
                 alt={essay.title}
@@ -58,7 +58,7 @@ export default function EssaysSection() {
             {/* Content */}
             <div className="flex-1">
               {/* Meta */}
-              <div className="flex items-center gap-4 text-xs uppercase tracking-widest mb-3">
+              <div className="flex flex-wrap items-center gap-4 text-xs uppercase tracking-widest mb-3">
                 <span className="text-primary">{essay.category}</span>
                 <span className="text-on-surface-variant">{essay.date}</span>
               </div>
