@@ -65,7 +65,7 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="bg-background text-on-surface flex items-center justify-center px-2 py-3 md:py-0 relative overflow-hidden">
+    <div className="text-on-surface flex items-center justify-center min-h-screen px-2 py-3 md:py-10 relative overflow-hidden">
       <Toaster position="top-right" reverseOrder={false} />
       <div className="w-full max-w-md z-10">
         {/* HEADING */}
