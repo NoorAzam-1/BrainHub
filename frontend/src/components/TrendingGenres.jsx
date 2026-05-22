@@ -19,11 +19,11 @@ export default function TrendingGenres() {
         </Link>
       </div>
 
-      <div className="hide-scrollbar mx-auto flex gap-8 overflow-x-auto px-2 py-4">
+      <div className="hide-scrollbar mx-auto flex gap-5 sm:gap-8 overflow-x-auto px-2 py-4">
         {site.genres.map((genre) => (
           <div
             key={genre.name}
-            className="group relative w-80 shrink-0 overflow-hidden rounded-3xl md:rounded-[2rem] glass-card transition-all duration-700 hover:-translate-y-2 md:w-92"
+            className="group relative w-[min(84vw,20rem)] shrink-0 overflow-hidden rounded-3xl md:rounded-[2rem] glass-card transition-all duration-700 hover:-translate-y-2 sm:w-80 md:w-[22rem] lg:w-[24rem]"
           >
             <Image
               src={genre.image}
@@ -33,7 +33,7 @@ export default function TrendingGenres() {
             />
             <div className="absolute inset-0 bg-linear-to-t from-background via-background/70 to-transparent opacity-95 transition-opacity group-hover:opacity-100" />
 
-            <div className="relative z-10 flex h-full flex-col justify-between p-8">
+            <div className="relative z-10 flex h-full flex-col justify-between p-6 sm:p-8">
               <div className="flex items-start justify-between">
                 <span className="rounded-full border border-primary/30 bg-primary/15 px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-primary backdrop-blur-md">
                   {genre.count}
@@ -45,7 +45,7 @@ export default function TrendingGenres() {
 
               <div className="space-y-6">
                 <div>
-                  <h3 className="mb-3 font-headline text-4xl font-black tracking-tighter text-on-surface">
+                  <h3 className="mb-3 font-headline text-3xl sm:text-4xl font-black tracking-tighter text-on-surface">
                     {genre.name}
                   </h3>
 
