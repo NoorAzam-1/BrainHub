@@ -41,7 +41,7 @@ export default function CartItem({ item, updateQty, removeItem }) {
 
         {/* Actions */}
         <div className="flex justify-between mt-6">
-          <div className="flex items-center justify-center bg-surface-container-low rounded-lg p-2">
+              <div className="flex items-center justify-center bg-surface-light rounded-xl p-2 border border-white/8">
             <button
               onClick={() => updateQty(item.productId, "dec")}
               className="px-3 cursor-pointer"
