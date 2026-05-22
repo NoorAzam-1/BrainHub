@@ -6,7 +6,7 @@ export default function OrderSummary({ subtotal, tax, total, data }) {
   };
 
   return (
-    <div className="glass-card flex flex-col p-4 md:p-8 rounded-3xl border border-white/8 sticky top-24 shadow-2xl shadow-black/15">
+    <div className="glass-card flex flex-col p-4 md:p-8 rounded-3xl border border-white/60 sticky top-24 shadow-2xl shadow-black/10">
       <h2 className="text-2xl font-bold mb-6 text-on-surface">Order Summary</h2>
 
       <div className="space-y-2  md:space-y-4 mb-6 text-on-surface-variant">
@@ -30,7 +30,7 @@ export default function OrderSummary({ subtotal, tax, total, data }) {
         </div>
       </div>
 
-      <div className="border-t border-white/10 pt-4 mb-6">
+      <div className="border-t border-border/30 pt-4 mb-6">
         <div className="flex justify-between text-xl font-bold">
           <span>Total</span>
           <span className="text-primary">₹{total.toFixed(2)}</span>
