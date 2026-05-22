@@ -58,7 +58,7 @@ export default function LoginPage() {
         </div>
 
         {/* CARD */}
-        <div className="glass-card p-4 md:p-6 rounded-3xl border border-white/8 shadow-2xl shadow-black/20">
+        <div className="glass-card p-4 md:p-6 rounded-3xl border border-white/60 shadow-2xl shadow-black/10">
           <form onSubmit={handleSubmit} className="space-y-4">
             {/* EMAIL */}
             <InputField
