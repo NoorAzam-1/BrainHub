@@ -50,7 +50,7 @@ export default function ForgotPasswordPage() {
           </p>
         )}
 
-        <div className="bg-surface-container/80 backdrop-blur-xl p-6 rounded-xl border border-outline-variant/20">
+        <div className="glass-card p-6 rounded-3xl border border-white/8 shadow-2xl shadow-black/20">
           {submitted ? (
             <div className="text-center text-on-surface">
               <p className="mb-4">
@@ -73,7 +73,7 @@ export default function ForgotPasswordPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-linear-to-r from-primary to-primary-container text-black font-bold py-3 rounded-lg flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition cursor-pointer"
+                className="btn btn-primary w-full py-3 flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition cursor-pointer"
               >
                 {loading ? "Sending..." : "Send Reset Link"}{" "}
                 <ArrowRight size={18} />
@@ -84,10 +84,7 @@ export default function ForgotPasswordPage() {
 
         <p className="text-center text-sm text-on-surface-variant mt-6">
           Remembered your password?{" "}
-          <a
-            href="/login"
-            className="text-primary font-semibold hover:underline"
-          >
+          <a href="/login" className="text-secondary font-semibold hover:text-primary transition">
             Sign In
           </a>
         </p>
@@ -99,17 +96,14 @@ export default function ForgotPasswordPage() {
 function InputField({ icon, label, ...props }) {
   return (
     <div className="space-y-2">
-      <label className="text-[11px] uppercase tracking-widest text-primary font-bold ml-1">
+      <label className="text-[11px] uppercase tracking-widest text-secondary font-bold ml-1">
         {label}
       </label>
       <div className="relative group">
         <span className="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant group-focus-within:text-primary transition">
           {icon}
         </span>
-        <input
-          {...props}
-          className="w-full bg-surface-container-lowest border-b-2 border-outline-variant/30 focus:border-primary outline-none pl-10 pr-3 py-3 text-sm rounded-t-md placeholder:text-on-surface-variant/40"
-        />
+        <input {...props} className="input" />
       </div>
     </div>
   );
