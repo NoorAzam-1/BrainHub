@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function RecentBook() {
   return (
-    <Link href="/browse" className="group bg-surface-container-lowest p-6 rounded-2xl flex flex-col md:flex-row gap-6 items-center cursor-pointer border border-transparent hover:border-white/10">
+    <Link href="/browse" className="group glass-card p-6 rounded-3xl flex flex-col md:flex-row gap-6 items-center cursor-pointer border border-white/60 hover:border-primary/25 transition">
       <div className="p-6 bg-cyan-100 rounded-sm group-hover:scale-105 transition duration-300 md:min-w-[43%]">
         <Image
           alt="images"
@@ -18,7 +18,7 @@ export default function RecentBook() {
         <h3 className="text-xl font-bold mt-1">Meditations</h3>
         <p className="text-sm text-on-surface-variant mb-4">Marcus Aurelius</p>
 
-        <div className="bg-surface-container-highest h-2 rounded-full">
+        <div className="bg-surface-light h-2 rounded-full overflow-hidden border border-white/5">
           <div className="bg-primary h-2 w-[32%]" />
         </div>
 
