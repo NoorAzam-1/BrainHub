@@ -38,8 +38,8 @@ export default function Sidebar({
       )}
 
       <aside
-        className={`w-64 sm:w-72 md:w-60 lg:w-80 p-3 sm:p-4 md:p-3 lg:p-4 space-y-6 bg-surface-container z-40
-        fixed top-0 left-0 h-full overflow-y-auto transform transition-transform duration-300 ${open ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 md:sticky md:top-16 md:h-fit`}>
+        className={`w-72 sm:w-80 md:w-72 lg:w-80 p-4 sm:p-5 space-y-6 glass-card z-40
+        fixed top-0 left-0 h-full overflow-y-auto transform transition-transform duration-300 ${open ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 md:sticky md:top-24 md:h-fit`}>
         {/* CLOSE BUTTON */}
         <button onClick={() => setOpen(false)} className="md:hidden text-primary">
           <X />
@@ -47,12 +47,12 @@ export default function Sidebar({
 
         {/* 🔍 SEARCH */}
         <div className="relative">
-          <Search className="absolute top-1/2 ml-1 -translate-y-1/2 text-outline-variant" />
+          <Search className="absolute top-1/2 ml-1 -translate-y-1/2 text-on-surface-variant" />
           <input
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search by title, author..."
-            className="w-full bg-surface-container-low border-b border-outline-variant pl-10 py-2 sm:py-3 text-xs sm:text-sm focus:border-primary outline-none"
+            className="input pl-10 py-3 text-sm"
           />
         </div>
 
@@ -68,10 +68,10 @@ export default function Sidebar({
                 onClick={() =>
                   setSelectedFormat(selectedFormat === f ? "" : f)
                 }
-                className={`px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs transition ${
+                className={`px-3 sm:px-4 py-1.5 rounded-full text-[10px] sm:text-xs transition ${
                   selectedFormat === f
-                    ? "bg-primary text-on-primary"
-                    : "bg-surface-container-highest text-on-surface-variant hover:bg-primary hover:text-on-primary"
+                    ? "bg-primary text-white shadow-lg shadow-primary/20"
+                    : "bg-surface-light text-on-surface-variant hover:bg-primary hover:text-white"
                 }`}
               >
                 {f}
@@ -90,10 +90,10 @@ export default function Sidebar({
               <button
                 key={g}
                 onClick={() => setSelectedGenre(selectedGenre === g ? "" : g)}
-                className={`px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs transition ${
+                className={`px-3 sm:px-4 py-1.5 rounded-full text-[10px] sm:text-xs transition ${
                   selectedGenre === g
-                    ? "bg-primary text-on-primary"
-                    : "bg-surface-container-highest text-on-surface-variant hover:bg-primary hover:text-on-primary"
+                    ? "bg-primary text-white shadow-lg shadow-primary/20"
+                    : "bg-surface-light text-on-surface-variant hover:bg-primary hover:text-white"
                 }`}
               >
                 {g}
@@ -104,8 +104,8 @@ export default function Sidebar({
 
         {/* 💰 PRICE */}
         <section>
-          <div className="flex justify-between text-[10px] sm:text-xs mb-3">
-            <h3 className="text-primary uppercase tracking-[0.1rem]">
+          <div className="flex justify-between text-[10px] sm:text-xs mb-3 text-on-surface-variant">
+            <h3 className="text-secondary uppercase tracking-[0.1rem]">
               Price Range
             </h3>
             <span className="flex items-center">
@@ -121,13 +121,13 @@ export default function Sidebar({
             max="5000"
             value={maxPrice}
             onChange={(e) => setMaxPrice(Number(e.target.value))}
-            className="w-full"
+            className="w-full accent-primary"
           />
         </section>
 
         {/* ⭐ RATING */}
         <section>
-          <h3 className="text-primary text-[10px] sm:text-xs uppercase mb-3">
+          <h3 className="text-secondary text-[10px] sm:text-xs uppercase mb-3">
             Average Rating
           </h3>
 
