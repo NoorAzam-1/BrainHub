@@ -7,12 +7,12 @@ import {
 
 export default function TermsPage() {
   return (
-    <div className="min-h-screen bg-background text-on-surface relative overflow-hidden">
-       <main className="relative z-10 mx-auto px-4 sm:px-6 lg:px-24">
+     <div className="min-h-screen bg-background text-on-surface relative overflow-hidden">
+       <main className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-6 md:py-10">
 
         {/* HERO */}
         <section className="mb-8 md:mb-14">
-          <span className="text-primary text-lg font-bold tracking-[0.2em] uppercase block mb-4">
+          <span className="text-secondary text-lg font-bold tracking-[0.2em] uppercase block mb-4">
             Legal Documentation
           </span>
 
@@ -25,7 +25,7 @@ export default function TermsPage() {
             gallery and purchase of curated literature. Please read them carefully.
           </p>
 
-          <div className="mt-4 flex gap-2 text-xs text-outline">
+          <div className="mt-4 flex gap-2 text-xs text-on-surface-variant">
             <span>Last Updated: January 24, 2026</span>
             <span>•</span>
             <span>Effective Immediately</span>
@@ -36,7 +36,7 @@ export default function TermsPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-10 md:mb-20">
           
           {/* Card 1 */}
-          <div className="bg-surface-container p-6 rounded-xl border border-outline-variant/20 hover:border-primary/40 transition">
+          <div className="glass-card p-6 rounded-3xl border border-white/8 hover:border-primary/40 transition">
             <UserCheck size={36} className="text-primary mb-4" />
             <h3 className="font-bold mb-1">Membership</h3>
             <p className="text-sm text-on-surface-variant">
@@ -45,7 +45,7 @@ export default function TermsPage() {
           </div>
 
           {/* Card 2 */}
-          <div className="bg-surface-container p-6 rounded-xl border border-outline-variant/20 hover:border-primary/40 transition">
+          <div className="glass-card p-6 rounded-3xl border border-white/8 hover:border-primary/40 transition">
             <ShoppingCart size={36} className="text-primary mb-4" />
             <h3 className="font-bold mb-1">Purchases</h3>
             <p className="text-sm text-on-surface-variant">
@@ -54,7 +54,7 @@ export default function TermsPage() {
           </div>
 
           {/* Card 3 */}
-          <div className="bg-surface-container p-6 rounded-xl border border-outline-variant/20 hover:border-primary/40 transition">
+          <div className="glass-card p-6 rounded-3xl border border-white/8 hover:border-primary/40 transition">
             <Copyright size={36} className="text-primary mb-4" />
             <h3 className="font-bold mb-1">Intellectual Property</h3>
             <p className="text-sm text-on-surface-variant">
@@ -72,7 +72,7 @@ export default function TermsPage() {
               01
             </span>
 
-            <h2 className="text-xl sm:text-2xl font-bold text-primary mb-6">
+            <h2 className="text-xl sm:text-2xl font-bold text-on-surface mb-6">
               Membership & Eligibility
             </h2>
 
@@ -83,7 +83,7 @@ export default function TermsPage() {
             </p>
 
             {/* Note */}
-            <div className="bg-surface-container-high p-4 rounded-lg border-l-4 border-primary mb-6">
+            <div className="glass-card p-4 rounded-2xl border-l-4 border-primary mb-6">
               <p className="text-xs italic text-on-surface-variant">
                 Note: You are solely responsible for maintaining the confidentiality
                 of your account credentials.
@@ -110,7 +110,7 @@ export default function TermsPage() {
               02
             </span>
 
-            <h2 className="text-xl sm:text-2xl font-bold text-primary mb-6">
+            <h2 className="text-xl sm:text-2xl font-bold text-on-surface mb-6">
               Purchases & Digital Access
             </h2>
 
@@ -142,7 +142,7 @@ export default function TermsPage() {
               03
             </span>
 
-            <h2 className="text-xl sm:text-2xl font-bold text-primary mb-6">
+            <h2 className="text-xl sm:text-2xl font-bold text-on-surface mb-6">
               Intellectual Property Rights
             </h2>
 
@@ -150,7 +150,7 @@ export default function TermsPage() {
               All content is protected by copyright laws and intellectual property rights.
             </p>
 
-            <div className="bg-surface-container-high p-6 rounded-xl border border-outline-variant/20">
+            <div className="glass-card p-6 rounded-3xl border border-white/8">
               <h4 className="font-semibold mb-3">Prohibited Actions</h4>
 
               <ul className="space-y-2 text-xs text-on-surface-variant">
