@@ -4,7 +4,7 @@ export default function PaymentMethod({ data, setData, errors }) {
   return (
     <section className="mb-12">
       {/* SELECT METHOD */}
-      <div className="grid grid-cols-2 gap-3 mb-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
         {/* CARD */}
         <div
           onClick={() => setData({ ...data, method: "card" })}
@@ -34,15 +34,15 @@ export default function PaymentMethod({ data, setData, errors }) {
 
       {/* 💳 CARD FORM */}
       {data.method === "card" && (
-        <div className="glass-card p-5 rounded-2xl border border-border/70 space-y-4">
+        <div className="glass-card p-4 sm:p-5 rounded-2xl border border-border/70 space-y-4">
           {/* CARD PREVIEW */}
           <div className="p-4 rounded-2xl bg-linear-to-r from-primary to-secondary text-white shadow-lg shadow-primary/20">
             <p className="text-sm opacity-80">Card Number</p>
-            <p className="text-lg font-bold tracking-widest">
+            <p className="text-base sm:text-lg font-bold tracking-widest">
               {data.cardNumber || "**** **** **** 1234"}
             </p>
 
-            <div className="flex justify-between mt-4 text-sm">
+            <div className="flex justify-between mt-4 text-xs sm:text-sm gap-3">
               <span>{data.name || "CARD HOLDER"}</span>
               <span>{data.expiry || "MM/YY"}</span>
             </div>
