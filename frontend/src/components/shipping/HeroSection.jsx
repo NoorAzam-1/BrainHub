@@ -16,7 +16,7 @@ export default function HeroSection() {
           </h2>
 
           <p className="text-on-surface-variant text-lg mb-8 max-w-xl">
-            At E_Book_Store, shipping isn&apos;t measured in days—it&apos;s
+            At BrainHub, shipping isn&apos;t measured in days—it&apos;s
             measured in milliseconds. Your next literary journey begins the
             moment you click &apos;Purchase&apos;.
           </p>
