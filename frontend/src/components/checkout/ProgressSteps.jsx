@@ -2,7 +2,7 @@ export default function ProgressSteps({ step }) {
   const steps = ["Cart", "Details", "Payment", "Finish"];
 
   return (
-    <div className="flex justify-between mb-10 px-4">
+    <div className="grid grid-cols-4 gap-2 mb-10 px-1 sm:flex sm:justify-between sm:px-4">
       {steps.map((label, i) => (
         <div key={i} className="flex-1 text-center">
           <div
