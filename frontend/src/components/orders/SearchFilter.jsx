@@ -7,14 +7,14 @@ export default function SearchFilter() {
           🔍
         </span>
 
-        <input
-          placeholder="Search orders or books..."
-          className="w-full bg-surface-container-lowest border-b border-outline-variant pl-10 py-3 rounded-xl focus:border-primary outline-none"
+          <input
+            placeholder="Search orders or books..."
+            className="w-full input pl-10 py-3 rounded-2xl"
         />
       </div>
 
       <div className="flex">
-        <button className="px-5 py-2 rounded-full bg-surface-container-highest text-sm">
+          <button className="px-5 py-2 rounded-full glass-card text-sm border border-white/60">
           Last 3 Months
         </button>
       </div>
