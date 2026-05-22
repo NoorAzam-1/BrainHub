@@ -8,10 +8,10 @@ export default function PaymentMethod({ data, setData, errors }) {
         {/* CARD */}
         <div
           onClick={() => setData({ ...data, method: "card" })}
-          className={`p-4 rounded-xl border cursor-pointer transition flex items-center justify-between ${
+          className={`p-4 rounded-2xl border cursor-pointer transition flex items-center justify-between glass-card ${
             data.method === "card"
-              ? "border-primary bg-surface-container-high"
-              : "border-outline-variant"
+              ? "border-primary bg-primary/10"
+              : "border-border/70"
           }`}
         >
           <span>💳 Card</span>
@@ -21,10 +21,10 @@ export default function PaymentMethod({ data, setData, errors }) {
         {/* UPI */}
         <div
           onClick={() => setData({ ...data, method: "upi" })}
-          className={`p-4 rounded-xl border cursor-pointer transition flex items-center justify-between ${
+          className={`p-4 rounded-2xl border cursor-pointer transition flex items-center justify-between glass-card ${
             data.method === "upi"
-              ? "border-primary bg-surface-container-high"
-              : "border-outline-variant"
+              ? "border-primary bg-primary/10"
+              : "border-border/70"
           }`}
         >
           <span>📱 UPI</span>
@@ -34,9 +34,9 @@ export default function PaymentMethod({ data, setData, errors }) {
 
       {/* 💳 CARD FORM */}
       {data.method === "card" && (
-        <div className="glass-card p-5 rounded-xl border border-outline-variant space-y-4">
+        <div className="glass-card p-5 rounded-2xl border border-border/70 space-y-4">
           {/* CARD PREVIEW */}
-          <div className="p-4 rounded-xl bg-linear-to-r from-primary to-primary-container text-on-primary">
+          <div className="p-4 rounded-2xl bg-linear-to-r from-primary to-secondary text-white shadow-lg shadow-primary/20">
             <p className="text-sm opacity-80">Card Number</p>
             <p className="text-lg font-bold tracking-widest">
               {data.cardNumber || "**** **** **** 1234"}
@@ -107,7 +107,7 @@ export default function PaymentMethod({ data, setData, errors }) {
 
       {/* 📱 UPI FORM */}
       {data.method === "upi" && (
-        <div className="glass-card p-5 rounded-xl border border-outline-variant space-y-4">
+        <div className="glass-card p-5 rounded-2xl border border-border/70 space-y-4">
           <div className="text-sm text-on-surface-variant">
             Pay using UPI (Google Pay, PhonePe, Paytm)
           </div>
@@ -126,13 +126,13 @@ export default function PaymentMethod({ data, setData, errors }) {
 
           {/* FAKE APPS */}
           <div className="flex gap-3 text-xs text-on-surface-variant">
-            <span className="px-3 py-1 rounded bg-surface-container-high">
+            <span className="px-3 py-1 rounded-full bg-surface-light border border-white/8">
               GPay
             </span>
-            <span className="px-3 py-1 rounded bg-surface-container-high">
+            <span className="px-3 py-1 rounded-full bg-surface-light border border-white/8">
               PhonePe
             </span>
-            <span className="px-3 py-1 rounded bg-surface-container-high">
+            <span className="px-3 py-1 rounded-full bg-surface-light border border-white/8">
               Paytm
             </span>
           </div>
