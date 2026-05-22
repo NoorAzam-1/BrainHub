@@ -6,7 +6,7 @@ export default function FAQSections() {
       </h3>
 
       <div className="space-y-4">
-        <details className="bg-surface-container-low p-6 rounded-xl">
+        <details className="glass-card p-6 rounded-3xl border border-white/60">
           <summary className="cursor-pointer font-bold">
             Are there any shipping costs?
           </summary>
@@ -15,7 +15,7 @@ export default function FAQSections() {
           </p>
         </details>
 
-        <details className="bg-surface-container-low p-6 rounded-xl">
+        <details className="glass-card p-6 rounded-3xl border border-white/60">
           <summary className="cursor-pointer font-bold">
             Do links expire?
           </summary>
@@ -24,7 +24,7 @@ export default function FAQSections() {
           </p>
         </details>
 
-        <details className="bg-surface-container-low p-6 rounded-xl">
+        <details className="glass-card p-6 rounded-3xl border border-white/60">
           <summary className="cursor-pointer font-bold">
             What if I didn&apos;t receive my email?
           </summary>
