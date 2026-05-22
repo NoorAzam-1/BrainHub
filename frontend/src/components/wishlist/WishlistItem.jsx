@@ -35,10 +35,10 @@ export default function WishlistItem({
 
   return (
     <>
-      <div className="group relative flex flex-col md:flex-row gap-6 p-4 rounded-3xl glass-card border border-white/8 hover:border-primary/20 transition shadow-2xl shadow-black/15">
+      <div className="group relative flex flex-col md:flex-row gap-6 p-4 rounded-3xl glass-card border border-white/60 hover:border-primary/20 transition shadow-2xl shadow-black/10">
         
         {/* Image */}
-        <div className="relative w-full md:w-40 aspect-2/3 overflow-hidden rounded-2xl shadow-xl shrink-0 border border-white/10">
+        <div className="relative w-full md:w-40 aspect-2/3 overflow-hidden rounded-2xl shadow-xl shrink-0 border border-white/60">
           <Image
             alt="Image"
             src={image || "/placeholder.png"}
