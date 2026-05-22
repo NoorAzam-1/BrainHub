@@ -70,7 +70,7 @@ export default function Hero() {
               width={320}
               height={600}
               priority
-              className="h-auto w-64 -rotate-6 rounded-2xl border border-white/10 shadow-[0_24px_80px_rgba(0,0,0,0.7)] transition-transform duration-500 group-hover:rotate-0 md:w-80"
+              className="h-auto w-64 -rotate-6 rounded-2xl border border-white/60 shadow-[0_24px_80px_rgba(15,23,42,0.12)] transition-transform duration-500 group-hover:rotate-0 md:w-80"
             />
           </div>
         </div>
