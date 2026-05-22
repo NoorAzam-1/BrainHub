@@ -36,8 +36,8 @@ export default function ProcessSection() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
 
         {/* Main Card */}
-        <div className="md:col-span-2 bg-surface-container p-8 rounded-2xl shadow-md">
-          <h3 className="text-2xl font-bold mb-4 text-on-secondary-container">
+        <div className="md:col-span-2 glass-card p-8 rounded-3xl shadow-2xl shadow-black/20">
+          <h3 className="text-2xl font-bold mb-4 text-on-surface">
             Immediate Confirmation
           </h3>
 
@@ -54,8 +54,8 @@ export default function ProcessSection() {
         </div>
 
         {/* Formats */}
-        <div className="bg-surface-variant p-6 md:p-8 rounded-2xl shadow-md">
-          <h3 className="text-xl font-bold mb-4">
+        <div className="glass-card p-6 md:p-8 rounded-3xl shadow-2xl shadow-black/20">
+          <h3 className="text-xl font-bold mb-4 text-on-surface">
             Universal Formats
           </h3>
 
@@ -73,7 +73,7 @@ export default function ProcessSection() {
         {data.map((item, i) => (
           <div
             key={i}
-            className="bg-surface-container-low p-6 rounded-2xl shadow-sm hover:shadow-md transition hover:scale-105"
+            className="glass-card p-6 rounded-3xl shadow-sm hover:-translate-y-1 transition duration-300"
           >
             {/* ICON */}
             <div className="mb-4 text-primary">
