@@ -26,7 +26,7 @@ export default function PrivacyPolicy() {
           </h1>
 
           <p className="text-on-surface-variant max-w-2xl mx-auto text-sm sm:text-lg leading-relaxed">
-            At E_Book_Store, we believe your literary preferences are personal.
+            At BrainHub, we believe your literary preferences are personal.
             This policy outlines how we curate, protect, and respect your digital footprint.
           </p>
 
