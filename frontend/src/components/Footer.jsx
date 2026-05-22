@@ -14,7 +14,7 @@ export default function Footer() {
     return null;
 
   return (
-    <footer className="mt-12 py-12 w-full border-t border-outline-variant/20 bg-background">
+    <footer className="mt-12 py-12 w-full border-t border-border/40 bg-surface">
       <div className="mx-auto w-full max-w-7xl px-6 md:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div className="space-y-4">
           <div className="font-headline text-lg font-extrabold text-on-surface">
@@ -93,7 +93,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mt-10 border-t border-outline-variant/10 pt-6">
+      <div className="mt-10 border-t border-border/30 pt-6">
         <div className="mx-auto max-w-7xl px-6 text-sm text-on-surface-variant flex items-center justify-between">
           <div>
             © {new Date().getFullYear()} {site.brand}
