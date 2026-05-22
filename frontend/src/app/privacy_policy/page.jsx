@@ -65,7 +65,7 @@ export default function PrivacyPolicy() {
             </div>
 
             {/* Quote */}
-            <div className="glass-card p-6 rounded-3xl border border-white/8 italic text-on-surface-variant">
+            <div className="glass-card p-6 rounded-3xl border border-white/60 italic text-on-surface-variant">
               &quot;We never sell your personal reading data to third-party advertisers.
               Your library is a sanctuary.&quot;
             </div>
@@ -130,7 +130,7 @@ export default function PrivacyPolicy() {
               </h2>
             </div>
 
-            <div className="glass-card rounded-3xl border border-white/8 overflow-hidden grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/8">
+            <div className="glass-card rounded-3xl border border-white/60 overflow-hidden grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-border/40">
               <div className="p-4 md:p-6 hover:bg-white/5 transition">
                 <Eye className="text-primary mb-3" />
                 <h4 className="font-bold mb-2">Right to Access</h4>
