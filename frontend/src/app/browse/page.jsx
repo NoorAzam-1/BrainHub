@@ -49,7 +49,7 @@ export default function BrowsePage() {
 
 
   return (
-    <main className="w-full mx-auto flex gap-12 bg-surface text-on-surface relative rounded-3xl overflow-hidden border border-white/8 shadow-2xl shadow-black/20">
+    <main className="w-full mx-auto flex gap-12 bg-surface text-on-surface relative rounded-3xl overflow-hidden border border-white/60 shadow-2xl shadow-black/10">
       {/* MOBILE MENU BUTTON */}
       {!open && (
         <button
