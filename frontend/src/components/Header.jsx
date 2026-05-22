@@ -21,12 +21,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { logoutUserAsync, getProfile } from "@/features/authSlice";
 import { getCart } from "@/features/cartSlice";
 import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
   const dispatch = useDispatch();
   const router = useRouter();
+  const pathname = usePathname();
+  console.log("asdfghjk", pathname);
   const { user } = useSelector((state) => state.auth);
   const { cartCount } = useSelector((state) => state.cart);
   const { wishlist = [] } = useSelector((state) => state.wishlist);
@@ -51,9 +54,17 @@ export default function Header() {
     { name: "Library", href: "/library", icon: Library },
   ];
 
+  if (
+    pathname === "/login" ||
+    pathname === "/register" ||
+    pathname === "/forgot_password" ||
+    pathname === "/reset_password"
+  )
+    return null;
+
   return (
     <>
-      <header className="sticky top-0 z-50 w-full border-b border-outline-variant/60 bg-background/60 backdrop-blur-lg transition-shadow">
+      <header className="sticky top-0 z-50 mb-10 w-full border-b border-outline-variant/60 bg-background/60 backdrop-blur-lg transition-shadow">
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 md:px-6 py-4">
           {/* LEFT */}
           <div className="flex items-center gap-2 md:gap-4">
@@ -67,7 +78,15 @@ export default function Header() {
 
             <Link href="/" className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-xl bg-gradient-futuristic flex items-center justify-center">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" fill="rgba(139,92,246,0.9)"/></svg>
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="12" cy="12" r="9" fill="rgba(139,92,246,0.9)" />
+                </svg>
               </div>
               <span className="font-headline text-lg font-extrabold uppercase tracking-tight text-on-surface">
                 {site.brand}
@@ -155,7 +174,10 @@ export default function Header() {
               </div>
             ) : (
               <div className="hidden md:flex items-center gap-3">
-                <Link href="/login" className="text-sm font-semibold hover:text-primary">
+                <Link
+                  href="/login"
+                  className="text-sm font-semibold hover:text-primary"
+                >
                   Login
                 </Link>
                 <Link href="/register" className="btn btn-primary">
