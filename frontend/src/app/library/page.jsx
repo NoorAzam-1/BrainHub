@@ -29,7 +29,7 @@ export default function LibraryPage() {
             <div className="bg-on-surface flex-1 h-px"></div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <FeaturedBook />
             <RecentBook />
           </div>
@@ -39,7 +39,7 @@ export default function LibraryPage() {
         <section className="mb-16">
           <h2 className="text-xl font-semibold mb-6">Reading Now</h2>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6">
             <BookCard
               title="Stoner"
               author="John Williams"
