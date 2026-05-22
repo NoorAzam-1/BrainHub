@@ -2,7 +2,6 @@
 import Link from "next/link";
 import {
   User,
-  LogIn,
   Heart,
   UserRoundCog,
   LogOut,
@@ -13,6 +12,7 @@ import {
   Library,
   ShoppingBag,
   Search,
+  Info,
 } from "lucide-react";
 
 import { site } from "@/data/site";
@@ -51,6 +51,7 @@ export default function Header() {
     { name: "Home", href: "/", icon: Home },
     { name: "Browse", href: "/browse", icon: Search },
     { name: "Library", href: "/library", icon: Library },
+    { name: "About", href: "/about", icon: Info },
   ];
 
   const isActiveLink = (href) => {
