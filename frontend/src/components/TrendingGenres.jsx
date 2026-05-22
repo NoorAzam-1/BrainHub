@@ -6,15 +6,15 @@ import Link from "next/link";
 export default function TrendingGenres() {
   return (
     <section className="my-8">
-      <div className="mx-auto mb-2 flex items-end justify-between px-3">
+      <div className="mx-auto mb-2 flex flex-col gap-4 px-3 md:flex-row md:items-end md:justify-between">
         <div>
-          <h2 className="font-headline text-3xl font-extrabold tracking-tight md:text-4xl">
+          <h2 className="font-headline text-3xl font-extrabold tracking-tight md:text-4xl text-on-surface">
             Trending Genres
           </h2>
           <p className="mt-2 text-on-surface-variant">Hand-picked categories for your next discovery.</p>
         </div>
 
-        <Link href="/browse" className="flex items-center gap-1 rounded-2xl md:rounded-full border border-primary/10 bg-primary/5 px-2 md:px-4 py-2 text-sm font-bold text-primary transition-all hover:underline cursor-pointer">
+        <Link href="/browse" className="btn btn-ghost flex items-center gap-1 rounded-full px-4 py-2 text-sm">
           View All <ArrowUpRight size={20} />
         </Link>
       </div>
@@ -23,7 +23,7 @@ export default function TrendingGenres() {
         {site.genres.map((genre) => (
           <div
             key={genre.name}
-            className="group relative w-80 shrink-0 overflow-hidden rounded-3xl md:rounded-[2.5rem] bg-surfaceContainer  transition-all duration-700 hover:-translate-y-3 md:w-92"
+            className="group relative w-80 shrink-0 overflow-hidden rounded-3xl md:rounded-[2rem] glass-card transition-all duration-700 hover:-translate-y-2 md:w-92"
           >
             <Image
               src={genre.image}
@@ -31,11 +31,11 @@ export default function TrendingGenres() {
               fill
               className="object-cover transition-transform duration-1000 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-linear-to-t from-background via-background/60 to-transparent opacity-90 transition-opacity group-hover:opacity-100" />
+            <div className="absolute inset-0 bg-linear-to-t from-background via-background/70 to-transparent opacity-95 transition-opacity group-hover:opacity-100" />
 
             <div className="relative z-10 flex h-full flex-col justify-between p-8">
               <div className="flex items-start justify-between">
-                <span className="rounded-full border border-primary/30 bg-primary/20 px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-primary backdrop-blur-md">
+                <span className="rounded-full border border-primary/30 bg-primary/15 px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-primary backdrop-blur-md">
                   {genre.count}
                 </span>
                 <Link href="/browse" className="translate-x-4 rounded-full bg-white/10 p-2 text-on-surface opacity-0 backdrop-blur-md transition-all group-hover:translate-x-0 group-hover:opacity-100">
@@ -53,7 +53,7 @@ export default function TrendingGenres() {
                     {genre.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="rounded border border-on-surface/20 px-2 py-0.5 text-[10px] font-bold uppercase text-on-surface/60"
+                        className="rounded border border-border/60 px-2 py-0.5 text-[10px] font-bold uppercase text-on-surface-variant"
                       >
                         {tag}
                       </span>
