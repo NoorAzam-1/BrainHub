@@ -126,13 +126,13 @@ export default function PaymentMethod({ data, setData, errors }) {
 
           {/* FAKE APPS */}
           <div className="flex gap-3 text-xs text-on-surface-variant">
-            <span className="px-3 py-1 rounded-full bg-surface-light border border-white/8">
+            <span className="px-3 py-1 rounded-full bg-surface-light border border-white/60">
               GPay
             </span>
-            <span className="px-3 py-1 rounded-full bg-surface-light border border-white/8">
+            <span className="px-3 py-1 rounded-full bg-surface-light border border-white/60">
               PhonePe
             </span>
-            <span className="px-3 py-1 rounded-full bg-surface-light border border-white/8">
+            <span className="px-3 py-1 rounded-full bg-surface-light border border-white/60">
               Paytm
             </span>
           </div>
