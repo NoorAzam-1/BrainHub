@@ -37,7 +37,7 @@ export default function ForgotPasswordPage() {
   };
 
   return (
-    <div className="bg-background text-on-surface flex justify-center px-2 py-12">
+    <div className="text-on-surface flex justify-center items-center h-screen px-2 py-12">
       <Toaster position="top-right" reverseOrder={false} />
 
       <div className="w-full max-w-md">
