@@ -27,14 +27,14 @@ export default function ProfilePage() {
     <div className="min-h-screen bg-background text-on-surface">
       <main className="max-w-5xl mx-auto space-y-4 md:space-y-7">
         <section className="flex flex-col items-center text-center rounded-3xl glass-card p-8 md:p-10">
-          <div className="w-20 h-20 rounded-full bg-gradient-futuristic border border-white/10 mb-4" />
+          <div className="w-20 h-20 rounded-full bg-gradient-futuristic border border-white/80 mb-4" />
           <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-wide">
             {user?.name || "No Name"}
           </h2>
           <p className="text-on-surface-variant text-sm mt-2">AI learning dashboard and personal workspace</p>
         </section>
 
-        <section className="glass-card p-5 rounded-3xl border border-white/8">
+        <section className="glass-card p-5 rounded-3xl border border-white/60">
           <h3 className="text-xs uppercase tracking-widest text-on-surface-variant mb-4">
             Library Insights
           </h3>
@@ -53,7 +53,7 @@ export default function ProfilePage() {
             Account Management
           </h3>
 
-          <div className="glass-card rounded-3xl border border-white/8 overflow-hidden">
+          <div className="glass-card rounded-3xl border border-white/60 overflow-hidden">
             <MenuItem
               icon={<User size={18} />}
               label="Personal Information"
@@ -80,7 +80,7 @@ export default function ProfilePage() {
           </div>
         </section>
 
-        <section className="glass-card p-5 rounded-3xl border border-white/8">
+        <section className="glass-card p-5 rounded-3xl border border-white/60">
           {active === "personal" && <PersonalInfo user={user} />}
           {active === "orders" && <OrderHistory />}
           {active === "payment" && <PaymentMethods />}
@@ -93,7 +93,7 @@ export default function ProfilePage() {
         </section>
 
         {role && (
-          <div className="glass-card rounded-3xl border border-white/8 p-5">
+          <div className="glass-card rounded-3xl border border-white/60 p-5">
             <AddBook />
           </div>
         )}
@@ -121,8 +121,8 @@ function MenuItem({ icon, label, onClick, value, active }) {
   return (
     <button
       onClick={onClick}
-      className={`w-full flex items-center justify-between px-4 py-4 transition group border-b border-outline-variant/10 last:border-none
-        ${isActive ? "bg-primary/10" : "hover:bg-white/5"}
+      className={`w-full flex items-center justify-between px-4 py-4 transition group border-b border-border/30 last:border-none
+        ${isActive ? "bg-primary/10" : "hover:bg-slate-100"}
       `}
     >
       <div className="flex items-center gap-3">
@@ -178,7 +178,7 @@ function OrderHistory() {
         {orders.map((o, i) => (
           <div
             key={i}
-            className="flex justify-between p-3 bg-surface-container-high rounded-lg"
+            className="flex justify-between p-3 bg-surface-light rounded-2xl border border-border/30"
           >
             <div>
               <p className="text-sm font-medium">{o.book}</p>
@@ -207,7 +207,7 @@ function PaymentMethods() {
         {cards.map((card, i) => (
           <div
             key={i}
-            className="flex justify-between p-3 bg-surface-container-high rounded-lg"
+            className="flex justify-between p-3 bg-surface-light rounded-2xl border border-border/30"
           >
             <span>{card.type}</span>
             <span className="text-on-surface-variant">{card.number}</span>
@@ -220,7 +220,7 @@ function PaymentMethods() {
 
 function InfoRow({ label, value }) {
   return (
-    <div className="flex justify-between border-b border-outline-variant/10 pb-2">
+    <div className="flex justify-between border-b border-border/30 pb-2">
       <span className="text-on-surface-variant">{label}</span>
       <span>{value}</span>
     </div>
