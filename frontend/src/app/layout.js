@@ -29,8 +29,8 @@ export default function RootLayout({ children }) {
         <Providers>
           <AuthGuard>
             <Header />
-            <main className="relative z-10 mx-auto mt-6 mb-16 w-full max-w-7xl px-4 sm:mt-8 sm:px-6 lg:mt-10 lg:px-10">
-              <div className="space-y-8 md:space-y-12">
+            <main className="relative z-10 mx-auto  w-full max-w-7xl px-4 sm:px-6 lg:px-10">
+              <div>
                 {children}
               </div>
             </main>
