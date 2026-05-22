@@ -53,27 +53,30 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 z-50 w-full border-b border-outline-variant/80 bg-background/80 backdrop-blur-xl">
+      <header className="sticky top-0 z-50 w-full border-b border-outline-variant/60 bg-background/60 backdrop-blur-lg transition-shadow">
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 md:px-6 py-4">
           {/* LEFT */}
           <div className="flex items-center gap-2 md:gap-4">
             <button
               onClick={() => setOpen(true)}
-              className="text-primary md:hidden hover:text-tertiary"
+              className="md:hidden btn-ghost p-2 flex items-center justify-center"
+              aria-label="Open menu"
             >
-              <Menu className="h-6 w-6 cursor-pointer" />
+              <Menu className="h-6 w-6" />
             </button>
 
-            <Link
-              href="/"
-              className="font-headline text-xl font-black uppercase text-primary hover:text-tertiary"
-            >
-              {site.brand}
+            <Link href="/" className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-xl bg-gradient-futuristic flex items-center justify-center">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" fill="rgba(139,92,246,0.9)"/></svg>
+              </div>
+              <span className="font-headline text-lg font-extrabold uppercase tracking-tight text-on-surface">
+                {site.brand}
+              </span>
             </Link>
           </div>
 
           {/* CENTER */}
-          <nav className="hidden md:flex items-center gap-8 text-sm font-semibold">
+          <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -151,19 +154,20 @@ export default function Header() {
                 )}
               </div>
             ) : (
-              <Link
-                href="/login"
-                className="flex items-center gap-1 text-sm font-semibold hover:text-primary"
-              >
-                <LogIn size={16} />
-                Login
-              </Link>
+              <div className="hidden md:flex items-center gap-3">
+                <Link href="/login" className="text-sm font-semibold hover:text-primary">
+                  Login
+                </Link>
+                <Link href="/register" className="btn btn-primary">
+                  Get Started
+                </Link>
+              </div>
             )}
 
             {/* CART */}
             {isLoggedIn && (
-              <Link href="/cart" className="relative text-primary">
-                <ShoppingCart className="h-6 w-6" />
+              <Link href="/cart" className="relative">
+                <ShoppingCart className="h-6 w-6 text-on-surface" />
 
                 {cartCount > 0 && (
                   <span className="absolute -right-2 -top-2 bg-primary text-black text-[10px] px-1.5 py-0.5 rounded-full font-bold">
