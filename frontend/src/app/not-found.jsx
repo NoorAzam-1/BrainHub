@@ -30,7 +30,7 @@ export default function NotFound() {
       </section>
 
       <div className="absolute bottom-2 -left-36 hidden lg:block opacity-20">
-        <div className="w-64 h-96 glass-card rotate-12 rounded-2xl border border-white/8 shadow-2xl overflow-hidden">
+        <div className="w-64 h-96 glass-card rotate-12 rounded-2xl border border-white/60 shadow-2xl overflow-hidden">
           <Image
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOU-rmsx8jz3LG5r95XH9sBlbkiFeTKmb2rpeDAeLg7INqPqTFF6Fr_cr_2hpJVUUUH_2x9Pvb-lll3QtNubg04VLWq4jASUOTMQ9ecW7U4DUcvwnEF4OE1d1aa9LZXHA7fKWta7uDdg_ThZnI6Q5CxY7vRH6IkoOOvyLROSSZ7YEk2tkhF6eK9Mlpv73L0Fwo9ylN58OykRvmzmghwqdXZiXNct0ZuWQocYwdfCUCSnbSah8Lg-8r8WZ75tEMzzUqRp-hKCkardU"
             alt="books"
@@ -41,7 +41,7 @@ export default function NotFound() {
       </div>
 
       <div className="absolute -top-15 -right-40 hidden lg:block opacity-20">
-        <div className="w-72 h-48 glass-card -rotate-6 rounded-2xl border border-white/8 shadow-2xl overflow-hidden">
+        <div className="w-72 h-48 glass-card -rotate-6 rounded-2xl border border-white/60 shadow-2xl overflow-hidden">
           <Image
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb-UbShx-prEmAV0C6_0EZcKxXyKURq59jzZY_x1yPmPJp-XZwd_8gS9WrIBFz3AybvNq0x0iTpHip6lYFiMTYF0u8lWC5YJNeWOSUZIneJB5EVDJ7OaK2L7DSHbOL9pdXrNiTNVJC2EmYjMUy53RoZ0fUDe4kOnybkzj66zXh45AKyg5RvKxN_aULSj_eIoltV5w4ut1Bsz2AeQHjrKisbhlqJymA5FLkl0B_hGsut3H-sSNEcFsJa8t38qWc02v-xX3YdYFz6CA"
             alt="paper"
