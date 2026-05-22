@@ -3,26 +3,54 @@ import { site } from "@/data/site";
 
 export default function Footer() {
   return (
-    <footer className="mt-6 md:mt-10  py-4 md:py-8 w-full h-full border-t border-[#1b3656] bg-background">
-      <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-4 md:gap-6 px-8 text-center">
-        <div className="font-headline text-sm md:text-lg lg:text-xl font-bold tracking-widest text-primary">
-          {site.brand}
+    <footer className="mt-12 py-12 w-full border-t border-outline-variant/20 bg-background">
+      <div className="mx-auto w-full max-w-7xl px-6 md:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="space-y-4">
+          <div className="font-headline text-lg font-extrabold text-on-surface">
+            {site.brand}
+          </div>
+          <p className="text-on-surface-variant text-sm max-w-sm">
+            BrainHub — AI-powered learning for modern teams and creators. Build skills faster with personalized learning paths and smart assessments.
+          </p>
+          <div className="flex items-center gap-3">
+            <a href="#" className="text-on-surface-variant hover:text-on-surface transition">Twitter</a>
+            <a href="#" className="text-on-surface-variant hover:text-on-surface transition">LinkedIn</a>
+            <a href="#" className="text-on-surface-variant hover:text-on-surface transition">GitHub</a>
+          </div>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-4 md:gap-8">
-          {site.footerLinks.map((item) => (
-            <Link
-              key={item.title}
-              href={item.link}
-              className="text-xs sm:text-sm md:text-md lg:text-lg  leading-relaxed text-on-surface/50 transition-colors hover:text-primary"
-            >
-              {item.title}
-            </Link>
-          ))}
+        <div>
+          <h4 className="text-on-surface font-semibold mb-3">Product</h4>
+          <ul className="space-y-2 text-on-surface-variant text-sm">
+            <li><Link href="/browse">Courses</Link></li>
+            <li><Link href="/library">Library</Link></li>
+            <li><Link href="/dashboard">Dashboard</Link></li>
+          </ul>
         </div>
 
-        <div className="text-xs md:text-sm leading-relaxed text-on-surface/30">
-          © 2026 @ {site.brand}
+        <div>
+          <h4 className="text-on-surface font-semibold mb-3">Resources</h4>
+          <ul className="space-y-2 text-on-surface-variant text-sm">
+            <li><Link href="/blog">Blog</Link></li>
+            <li><Link href="/feedback">Feedback</Link></li>
+            <li><Link href="/terms">Terms</Link></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="text-on-surface font-semibold mb-3">Company</h4>
+          <ul className="space-y-2 text-on-surface-variant text-sm">
+            <li><Link href="/about">About</Link></li>
+            <li><Link href="/privacy_policy">Privacy</Link></li>
+            <li><Link href="/contact">Contact</Link></li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="mt-10 border-t border-outline-variant/10 pt-6">
+        <div className="mx-auto max-w-7xl px-6 text-sm text-on-surface-variant flex items-center justify-between">
+          <div>© {new Date().getFullYear()} {site.brand}</div>
+          <div className="text-on-surface-variant">Made with ❤️ — BrainHub</div>
         </div>
       </div>
     </footer>
