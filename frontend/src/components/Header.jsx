@@ -29,7 +29,6 @@ export default function Header() {
   const dispatch = useDispatch();
   const router = useRouter();
   const pathname = usePathname();
-  console.log("asdfghjk", pathname);
   const { user } = useSelector((state) => state.auth);
   const { cartCount } = useSelector((state) => state.cart);
   const { wishlist = [] } = useSelector((state) => state.wishlist);
@@ -64,7 +63,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 mb-10 w-full border-b border-outline-variant/60 bg-background/60 backdrop-blur-lg transition-shadow">
+      <header className="sticky top-0 z-50 mb-10 w-full border-b border-border/70 bg-white/85 backdrop-blur-xl transition-shadow shadow-sm">
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 md:px-6 py-4">
           {/* LEFT */}
           <div className="flex items-center gap-2 md:gap-4">
@@ -77,7 +76,7 @@ export default function Header() {
             </button>
 
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-xl bg-gradient-futuristic flex items-center justify-center">
+              <div className="w-8 h-8 rounded-xl bg-gradient-futuristic flex items-center justify-center shadow-sm shadow-primary/10">
                 <svg
                   width="18"
                   height="18"
@@ -123,12 +122,12 @@ export default function Header() {
 
                 {/* DROPDOWN */}
                 {profileOpen && (
-                  <div className="absolute -right-6 md:-right-10 lg:-right-12 xl:-right-20 top-6 w-48 bg-background border border-outline-variant/30 rounded-xl shadow-2xl z-50 backdrop-blur-xl">
+                  <div className="absolute -right-6 md:-right-10 lg:-right-12 xl:-right-20 top-6 w-52 glass-card rounded-3xl shadow-2xl z-50 backdrop-blur-2xl border border-white/70">
                     {/* LINKS */}
                     <div className="py-2 text-sm">
                       <Link
                         href="/profile"
-                        className="flex items-center gap-3 px-4 py-2 hover:bg-white/5 transition"
+                        className="flex items-center gap-3 px-4 py-2 hover:bg-slate-100 transition"
                       >
                         <User size={16} />
                         My Profile
@@ -136,7 +135,7 @@ export default function Header() {
 
                       <Link
                         href="/orders"
-                        className="flex items-center gap-3 px-4 py-2 hover:bg-white/5 transition"
+                        className="flex items-center gap-3 px-4 py-2 hover:bg-slate-100 transition"
                       >
                         <ShoppingBag size={16} />
                         Orders
@@ -144,7 +143,7 @@ export default function Header() {
 
                       <Link
                         href="/wishlist"
-                        className="flex items-center justify-between px-4 py-2 hover:bg-white/5 transition"
+                        className="flex items-center justify-between px-4 py-2 hover:bg-slate-100 transition"
                       >
                         <div className="flex items-center gap-3">
                           <Heart size={16} />
@@ -152,7 +151,7 @@ export default function Header() {
                         </div>
 
                         {wishlist.length > 0 && (
-                          <span className="text-xs bg-primary text-black px-2 py-0.5 rounded-full font-bold">
+                          <span className="text-xs bg-primary text-white px-2 py-0.5 rounded-full font-bold">
                             {wishlist.length}
                           </span>
                         )}
@@ -160,7 +159,7 @@ export default function Header() {
                     </div>
 
                     {/* LOGOUT */}
-                    <div className="border-t border-outline-variant/20 mt-2 pt-2">
+                    <div className="border-t border-border/40 mt-2 pt-2">
                       <button
                         onClick={logout}
                         className="flex items-center gap-3 px-4 py-2 w-full text-red-500 hover:bg-red-500/10 transition"
@@ -192,7 +191,7 @@ export default function Header() {
                 <ShoppingCart className="h-6 w-6 text-on-surface" />
 
                 {cartCount > 0 && (
-                  <span className="absolute -right-2 -top-2 bg-primary text-black text-[10px] px-1.5 py-0.5 rounded-full font-bold">
+                  <span className="absolute -right-2 -top-2 bg-primary text-white text-[10px] px-1.5 py-0.5 rounded-full font-bold">
                     {cartCount}
                   </span>
                 )}
@@ -204,12 +203,12 @@ export default function Header() {
 
       {/* MOBILE MENU */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-background shadow-2xl border-r border-outline-variant/20 transform transition-transform duration-300 z-50 ${
+        className={`fixed top-0 left-0 h-full w-64 glass-card shadow-2xl border-r border-border/50 transform transition-transform duration-300 z-50 ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex justify-between items-center p-4 border-b border-outline-variant/20">
-          <span className="text-primary font-bold text-lg">Menu</span>
+        <div className="flex justify-between items-center p-4 border-b border-border/40">
+          <span className="text-secondary font-bold text-lg">Menu</span>
           <button onClick={() => setOpen(false)}>
             <X className="hover:text-red-600 cursor-pointer" />
           </button>
@@ -223,7 +222,7 @@ export default function Header() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="flex items-center gap-3 p-3 rounded-md hover:bg-white/5"
+                className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-100 transition"
               >
                 <Icon size={18} />
                 <span className="text-sm font-medium">{link.name}</span>
@@ -236,7 +235,7 @@ export default function Header() {
       {open && (
         <div
           onClick={() => setOpen(false)}
-          className="fixed inset-0 bg-black/60 z-40"
+          className="fixed inset-0 bg-slate-900/30 z-40"
         />
       )}
     </>
