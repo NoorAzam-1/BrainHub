@@ -25,14 +25,16 @@ export default function ProfilePage() {
 
   return (
     <div className="min-h-screen bg-background text-on-surface">
-      <main className="max-w-4xl mx-auto space-y-4 md:space-y-7">
-        <section className="flex flex-col items-center text-center">
-          <h2 className="text-2xl font-bold uppercase">
+      <main className="max-w-5xl mx-auto space-y-4 md:space-y-7">
+        <section className="flex flex-col items-center text-center rounded-3xl glass-card p-8 md:p-10">
+          <div className="w-20 h-20 rounded-full bg-gradient-futuristic border border-white/10 mb-4" />
+          <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-wide">
             {user?.name || "No Name"}
           </h2>
+          <p className="text-on-surface-variant text-sm mt-2">AI learning dashboard and personal workspace</p>
         </section>
 
-        <section className="bg-surface-container p-5 rounded-xl border border-outline-variant/20">
+        <section className="glass-card p-5 rounded-3xl border border-white/8">
           <h3 className="text-xs uppercase tracking-widest text-on-surface-variant mb-4">
             Library Insights
           </h3>
@@ -51,7 +53,7 @@ export default function ProfilePage() {
             Account Management
           </h3>
 
-          <div className="bg-surface-container rounded-xl border border-outline-variant/20 overflow-hidden">
+          <div className="glass-card rounded-3xl border border-white/8 overflow-hidden">
             <MenuItem
               icon={<User size={18} />}
               label="Personal Information"
@@ -78,7 +80,7 @@ export default function ProfilePage() {
           </div>
         </section>
 
-        <section className="bg-surface-container p-5 rounded-xl border border-outline-variant/20">
+        <section className="glass-card p-5 rounded-3xl border border-white/8">
           {active === "personal" && <PersonalInfo user={user} />}
           {active === "orders" && <OrderHistory />}
           {active === "payment" && <PaymentMethods />}
@@ -91,7 +93,7 @@ export default function ProfilePage() {
         </section>
 
         {role && (
-          <div className="bg-surface-container rounded-xl border border-outline-variant/20 p-5">
+          <div className="glass-card rounded-3xl border border-white/8 p-5">
             <AddBook />
           </div>
         )}
@@ -103,14 +105,14 @@ export default function ProfilePage() {
 function Stat({ number, label }) {
   return (
     <div className="flex-1">
-      <p className="text-2xl font-bold text-primary">{number}</p>
+      <p className="text-2xl font-bold text-secondary">{number}</p>
       <p className="text-[10px] uppercase text-on-surface-variant">{label}</p>
     </div>
   );
 }
 
 function Divider() {
-  return <div className="w-px bg-outline-variant/30 mx-2" />;
+  return <div className="w-px bg-border/40 mx-2" />;
 }
 
 function MenuItem({ icon, label, onClick, value, active }) {
@@ -125,8 +127,8 @@ function MenuItem({ icon, label, onClick, value, active }) {
     >
       <div className="flex items-center gap-3">
         <span
-          className={`transition ${
-            isActive ? "text-primary scale-110" : "text-primary"
+            className={`transition ${
+            isActive ? "text-primary scale-110" : "text-on-surface-variant"
           }`}
         >
           {icon}
