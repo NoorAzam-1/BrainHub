@@ -6,7 +6,6 @@ import { Toaster, toast } from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { loginUser } from "@/features/authSlice";
 import { useRouter } from "next/navigation";
-
 export default function LoginPage() {
   const dispatch = useDispatch();
   const [form, setForm] = useState({
@@ -45,8 +44,9 @@ export default function LoginPage() {
     setLoading(false);
   };
 
+
   return (
-    <div className="bg-background text-on-surface flex justify-center px-2 relative overflow-hidden">
+    <div className="text-on-surface flex justify-center items-center min-h-screen w-full ">
       <Toaster position="top-right" reverseOrder={false} />
       <div className="w-full max-w-md z-10">
         {/* HEADING */}
