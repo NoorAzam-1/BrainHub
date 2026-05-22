@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <section>
-      <div className="relative w-full min-h-96 aspect-21/9 rounded-xl overflow-hidden group">
+      <div className="relative w-full overflow-hidden rounded-2xl sm:rounded-[2rem] group aspect-[4/3] sm:aspect-[21/9] min-h-[420px] sm:min-h-[520px]">
         <Image
           alt="image"
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv7t8W6Dc0Fv4-FkmI06L2qa6GPW6-SCkAWXOqjGjmGmnP7mEwt3XlvdGw4nkAOMMxboPg4CmPLVYGZVefj9FOL32wtDRszCWAFyb3n1y5anhO8cNcMQH7AWJPCD79wkhWj_ZpnJF7Y3zb0h8FmjLslIiZuKfxOzw-Kp5juuQaAV5n_BMvNSSyNqaldUnEYgr9VLR3N1ZhweBpPQCw8ltoyv1izyCxGSyvFfaClH-mpFzKz831sxo9Vkqgc3by2Oo6ZMAP1qBsEow"
@@ -13,16 +13,16 @@ export default function HeroSection() {
 
         <div className="absolute inset-0 bg-linear-to-r from-surface-dim to-transparent" />
 
-        <div className="absolute inset-y-0 left-0 flex flex-col justify-center px-8 md:px-16 max-w-2xl">
+        <div className="absolute inset-y-0 left-0 flex flex-col justify-center px-5 sm:px-8 md:px-16 max-w-xl sm:max-w-2xl">
           <span className="text-primary text-xs uppercase tracking-widest mb-3">
             BrainHub Journal
           </span>
 
-          <h2 className="text-4xl md:text-5xl font-headline font-extrabold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-headline font-extrabold mb-4 sm:mb-6 max-w-xl leading-tight">
             Discover Stories Beyond the Pages
           </h2>
 
-          <p className="italic text-on-surface-variant border-l-2 border-primary/40 pl-4">
+          <p className="italic text-sm sm:text-base text-on-surface-variant border-l-2 border-primary/40 pl-4 max-w-lg">
             &quot;In 2026, stories are not just read — they are experienced.&quot;
           </p>
         </div>
