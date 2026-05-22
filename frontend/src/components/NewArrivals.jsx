@@ -29,10 +29,10 @@ export default function NewArrivals() {
         <Link href="/browse" className="text-sm font-semibold text-secondary hover:text-primary transition">Browse all</Link>
       </div>
 
-      <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 sm:gap-8">
         {site.arrivals.map((book) => (
           <Link href="/browse" key={book.title} className="group">
-            <div className="relative mb-4 aspect-3/4 overflow-hidden rounded-2xl border border-white/60 bg-surface shadow-2xl shadow-black/10">
+            <div className="relative mb-4 aspect-[4/5] overflow-hidden rounded-2xl border border-white/60 bg-surface shadow-2xl shadow-black/10">
               <Image
                 src={book.image}
                 alt={book.title}
