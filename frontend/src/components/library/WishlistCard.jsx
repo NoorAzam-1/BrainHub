@@ -19,7 +19,6 @@ export default function WishlistCard({ title, price, image, bg }) {
           <h4 className="text-sm font-semibold text-on-surface">{title}</h4>
           <p className="text-xs text-on-surface-variant">Author Name</p>
         </div>
-
         <p className="text-primary font-bold">{price}</p>
       </div>
     </Link>
