@@ -35,13 +35,11 @@ export default function Header() {
   const isLoggedIn = !!user;
 
   useEffect(() => {
-    setProfileOpen(false);
-
     if (!user) {
       dispatch(getProfile());
       dispatch(getCart());
     }
-  }, [user]);
+  }, [dispatch, user]);
 
   const logout = () => {
     dispatch(logoutUserAsync());
@@ -49,7 +47,7 @@ export default function Header() {
   };
   const navLinks = [
     { name: "Home", href: "/", icon: Home },
-    { name: "Browse", href: "/browse", icon: Search },
+    { name: "Books", href: "/browse", icon: Search },
     { name: "Library", href: "/library", icon: Library },
     { name: "About", href: "/about", icon: Info },
   ];
