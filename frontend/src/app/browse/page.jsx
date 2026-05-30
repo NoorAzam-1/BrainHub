@@ -49,12 +49,12 @@ export default function BrowsePage() {
 
 
   return (
-    <main className="w-full mx-auto flex gap-12 bg-surface text-on-surface relative rounded-3xl overflow-hidden border border-white/60 shadow-2xl shadow-black/10">
+    <main className="w-full mx-auto flex flex-col md:flex-row gap-0 md:gap-8 lg:gap-12 bg-surface text-on-surface relative rounded-3xl overflow-hidden border border-white/60 shadow-2xl shadow-black/10 p-4 sm:p-6 md:p-4 lg:p-6">
       {/* MOBILE MENU BUTTON */}
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          className="md:hidden fixed top-16 left-3 z-50 glass-card p-2 rounded-xl shadow-md"
+          className="md:hidden fixed top-20 left-3 z-50 glass-card p-2 rounded-xl shadow-md"
         >
           <Menu size={20} />
         </button>
@@ -75,8 +75,8 @@ export default function BrowsePage() {
       />
 
       {/* MAIN */}
-      <div className="flex-1 mt-14 md:mt-0">
-        <header className="mb-12">
+      <div className="min-w-0 flex-1 mt-14 md:mt-0">
+        <header className="mb-8 md:mb-12">
           <p className="text-xs tracking-[0.3em] text-secondary uppercase opacity-80">
             BrainHub Collection
           </p>
