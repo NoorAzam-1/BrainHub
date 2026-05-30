@@ -4,7 +4,7 @@ export default function ProgressSteps({ step }) {
   return (
     <div className="grid grid-cols-4 gap-2 mb-10 px-1 sm:flex sm:justify-between sm:px-4">
       {steps.map((label, i) => (
-        <div key={i} className="flex-1 text-center">
+        <div key={i} className="min-w-0 flex-1 text-center">
           <div
             className={`w-8 h-8 mx-auto rounded-full flex items-center justify-center text-xs font-bold ${
               step > i
@@ -16,7 +16,7 @@ export default function ProgressSteps({ step }) {
           </div>
 
           <p
-            className={`text-xs mt-2 ${
+            className={`text-[10px] sm:text-xs mt-2 truncate ${
               step > i ? "text-primary" : "text-on-surface-variant"
             }`}
           >
