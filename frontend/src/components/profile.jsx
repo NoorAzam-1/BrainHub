@@ -13,7 +13,7 @@ export default function ProfilePage() {
   const role = user?.role === "seller" || user?.role === "admin";
   useEffect(() => {
     dispatch(getProfile()).unwrap();
-  }, []);
+  }, [dispatch]);
 
   if (loading) {
     return (
@@ -25,7 +25,7 @@ export default function ProfilePage() {
 
   return (
     <div className="min-h-screen bg-background text-on-surface">
-      <main className="max-w-5xl mx-auto space-y-4 md:space-y-7">
+      <main className="max-w-5xl mx-auto space-y-4 md:space-y-7 px-4 sm:px-6 lg:px-0">
         <section className="flex flex-col items-center text-center rounded-3xl glass-card p-8 md:p-10">
           <div className="w-20 h-20 rounded-full bg-gradient-futuristic border border-white/80 mb-4" />
           <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-wide">
@@ -39,11 +39,9 @@ export default function ProfilePage() {
             Library Insights
           </h3>
 
-          <div className="flex justify-between text-center">
+          <div className="grid grid-cols-3 text-center gap-2">
             <Stat number="124" label="E-Books Read" />
-            <Divider />
             <Stat number="842" label="Reading Hours" />
-            <Divider />
             <Stat number="12" label="Day Streak" />
           </div>
         </section>
@@ -111,10 +109,6 @@ function Stat({ number, label }) {
   );
 }
 
-function Divider() {
-  return <div className="w-px bg-border/40 mx-2" />;
-}
-
 function MenuItem({ icon, label, onClick, value, active }) {
   const isActive = active === value;
 
@@ -178,7 +172,7 @@ function OrderHistory() {
         {orders.map((o, i) => (
           <div
             key={i}
-            className="flex justify-between p-3 bg-surface-light rounded-2xl border border-border/30"
+            className="flex flex-col sm:flex-row sm:justify-between gap-2 p-3 bg-surface-light rounded-2xl border border-border/30"
           >
             <div>
               <p className="text-sm font-medium">{o.book}</p>
@@ -207,7 +201,7 @@ function PaymentMethods() {
         {cards.map((card, i) => (
           <div
             key={i}
-            className="flex justify-between p-3 bg-surface-light rounded-2xl border border-border/30"
+            className="flex flex-col sm:flex-row sm:justify-between gap-2 p-3 bg-surface-light rounded-2xl border border-border/30"
           >
             <span>{card.type}</span>
             <span className="text-on-surface-variant">{card.number}</span>
@@ -220,7 +214,7 @@ function PaymentMethods() {
 
 function InfoRow({ label, value }) {
   return (
-    <div className="flex justify-between border-b border-border/30 pb-2">
+    <div className="flex flex-col sm:flex-row sm:justify-between gap-1 border-b border-border/30 pb-2">
       <span className="text-on-surface-variant">{label}</span>
       <span>{value}</span>
     </div>
