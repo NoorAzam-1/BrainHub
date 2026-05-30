@@ -1,4 +1,3 @@
-
 export default function OrderSummary({ subtotal, tax, total, data }) {
   const handleCheckout = () => {
     localStorage.setItem("checkoutData", JSON.stringify(data));
@@ -37,7 +36,6 @@ export default function OrderSummary({ subtotal, tax, total, data }) {
         </div>
       </div>
 
-      {/* Promo */}
       <div className="relative mb-4">
         <input
           placeholder="Promo Code"
@@ -48,7 +46,6 @@ export default function OrderSummary({ subtotal, tax, total, data }) {
         </button>
       </div>
 
-      {/* Button */}
       <button
         onClick={handleCheckout}
         className="btn btn-primary w-full py-3 px-4 font-bold cursor-pointer"
@@ -56,7 +53,6 @@ export default function OrderSummary({ subtotal, tax, total, data }) {
         Proceed to Checkout →
       </button>
 
-      {/* Note */}
       <div className="mt-6 text-xs text-on-surface-variant flex gap-2">
         🔒 Secure digital delivery guaranteed.
       </div>
