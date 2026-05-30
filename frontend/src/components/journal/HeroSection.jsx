@@ -23,7 +23,8 @@ export default function HeroSection() {
           </h2>
 
           <p className="italic text-sm sm:text-base text-on-surface-variant border-l-2 border-primary/40 pl-4 max-w-lg">
-            &quot;In 2026, stories are not just read — they are experienced.&quot;
+            &quot;In 2026, stories are not just read — they are
+            experienced.&quot;
           </p>
         </div>
       </div>
