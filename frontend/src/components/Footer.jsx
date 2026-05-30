@@ -25,26 +25,6 @@ export default function Footer() {
             skills faster with personalized learning paths and smart
             assessments.
           </p>
-          <div className="flex flex-wrap items-center gap-3">
-            <a
-              href="#"
-              className="text-on-surface-variant hover:text-on-surface transition"
-            >
-              Twitter
-            </a>
-            <a
-              href="#"
-              className="text-on-surface-variant hover:text-on-surface transition"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="#"
-              className="text-on-surface-variant hover:text-on-surface transition"
-            >
-              GitHub
-            </a>
-          </div>
         </div>
 
         <div>
@@ -57,7 +37,7 @@ export default function Footer() {
               <Link href="/library">Library</Link>
             </li>
             <li>
-              <Link href="/dashboard">Dashboard</Link>
+              <Link href="/browse">Books</Link>
             </li>
           </ul>
         </div>
