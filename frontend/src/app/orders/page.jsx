@@ -3,8 +3,7 @@ import SearchFilter from "@/components/orders/SearchFilter";
 
 export default function OrdersPage() {
   return (
-    <main className="w-full max-w-4xl mx-auto bg-surface text-on-surface px-4 sm:px-6 lg:px-0">
-      {/* Header */}
+    <main className="w-full max-w-4xl mx-auto text-on-surface px-4 sm:px-6 lg:px-0">
       <section className="mb-12">
         <h2 className="text-4xl md:text-5xl font-headline font-extrabold mb-4">
           Order History
@@ -16,17 +15,14 @@ export default function OrdersPage() {
         </p>
       </section>
 
-      {/* Search */}
       <SearchFilter />
 
-      {/* Orders */}
       <div className="space-y-8 mt-10">
         <OrderCard type="stack" status="completed" />
         <OrderCard type="single" status="processing" />
         <OrderCard type="single" status="completed" />
       </div>
 
-      {/* Load More */}
       <div className="mt-16 text-center">
         <button className="group text-on-surface-variant hover:text-primary font-bold text-sm uppercase tracking-widest cursor-pointer">
           Load Older Orders ↓
