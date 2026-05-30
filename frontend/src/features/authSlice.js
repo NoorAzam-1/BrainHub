@@ -2,7 +2,6 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { axiosInstance } from "@/utils/axios";
 import toast from "react-hot-toast";
 
-// REGISTER
 export const registerUser = createAsyncThunk(
   "auth/register",
   async (data, { rejectWithValue }) => {
@@ -23,7 +22,7 @@ export const registerUser = createAsyncThunk(
   },
 );
 
-// LOGIN
+
 export const loginUser = createAsyncThunk(
   "auth/login",
   async (data, { rejectWithValue }) => {
@@ -39,7 +38,6 @@ export const loginUser = createAsyncThunk(
   },
 );
 
-// PROFILE
 export const getProfile = createAsyncThunk(
   "auth/profile",
   async (_, { rejectWithValue }) => {
@@ -52,7 +50,6 @@ export const getProfile = createAsyncThunk(
   },
 );
 
-// LOGOUT
 export const logoutUserAsync = createAsyncThunk("auth/logout", async () => {
   toast.success("Logged out successfully");
   localStorage.removeItem("checkoutData");
@@ -61,7 +58,6 @@ export const logoutUserAsync = createAsyncThunk("auth/logout", async () => {
   return true;
 });
 
-// FORGOT
 export const forgotPassword = createAsyncThunk(
   "auth/forgot",
   async (email, { rejectWithValue }) => {
@@ -77,7 +73,6 @@ export const forgotPassword = createAsyncThunk(
   },
 );
 
-// RESET
 export const resetPassword = createAsyncThunk(
   "auth/reset",
   async ({ token, newPassword }, { rejectWithValue }) => {
@@ -108,8 +103,6 @@ const authSlice = createSlice({
 
   extraReducers: (builder) => {
     builder
-
-      // REGISTER
       .addCase(registerUser.pending, (s) => {
         s.loading = true;
       })
@@ -122,7 +115,6 @@ const authSlice = createSlice({
         s.error = a.payload;
       })
 
-      // LOGIN
       .addCase(loginUser.pending, (s) => {
         s.loading = true;
       })
@@ -135,7 +127,6 @@ const authSlice = createSlice({
         s.error = a.payload;
       })
 
-      // PROFILE
       .addCase(getProfile.pending, (s) => {
         s.loading = true;
       })
@@ -147,7 +138,6 @@ const authSlice = createSlice({
         s.loading = false;
       })
 
-      // LOGOUT
       .addCase(logoutUserAsync.fulfilled, (s) => {
         s.user = null;
         localStorage.removeItem("token");
