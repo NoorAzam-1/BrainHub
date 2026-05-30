@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { axiosInstance}  from "@/utils/axios";
 
-// PLACE ORDER
 export const placeOrder = createAsyncThunk(
   "order/place",
   async (data) => {
@@ -10,7 +9,6 @@ export const placeOrder = createAsyncThunk(
   }
 );
 
-// GET MY ORDERS
 export const getMyOrders = createAsyncThunk(
   "order/getAll",
   async () => {
@@ -19,7 +17,6 @@ export const getMyOrders = createAsyncThunk(
   }
 );
 
-// GET SINGLE ORDER
 export const getSingleOrder = createAsyncThunk(
   "order/getOne",
   async (id) => {
@@ -28,7 +25,6 @@ export const getSingleOrder = createAsyncThunk(
   }
 );
 
-// DELETE ORDER
 export const deleteOrder = createAsyncThunk(
   "order/delete",
   async (id) => {
@@ -37,7 +33,6 @@ export const deleteOrder = createAsyncThunk(
   }
 );
 
-// UPDATE ORDER (admin use)
 export const updateOrderStatus = createAsyncThunk(
   "order/update",
   async ({ id, data }) => {
@@ -57,8 +52,6 @@ const orderSlice = createSlice({
 
   extraReducers: (builder) => {
     builder
-
-      //  GET ALL
       .addCase(getMyOrders.pending, (state) => {
         state.loading = true;
       })
@@ -67,7 +60,6 @@ const orderSlice = createSlice({
         state.orders = action.payload;
       })
 
-      //  GET SINGLE
       .addCase(getSingleOrder.pending, (state) => {
         state.loading = true;
       })
@@ -76,19 +68,16 @@ const orderSlice = createSlice({
         state.singleOrder = action.payload;
       })
 
-      // PLACE ORDER
       .addCase(placeOrder.fulfilled, (state, action) => {
         state.orders.unshift(action.payload.data);
       })
 
-      // DELETE
       .addCase(deleteOrder.fulfilled, (state, action) => {
         state.orders = state.orders.filter(
           (item) => item._id !== action.payload
         );
       })
 
-      //  UPDATE
       .addCase(updateOrderStatus.fulfilled, (state, action) => {
         const index = state.orders.findIndex(
           (item) => item._id === action.payload._id
