@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import {axiosInstance} from "@/utils/axios";
 
-//  GET ALL PRODUCTS
 export const getAllProducts = createAsyncThunk(
   "product/list",
   async () => {
@@ -10,7 +9,6 @@ export const getAllProducts = createAsyncThunk(
   }
 );
 
-//  GET SINGLE PRODUCT
 export const getSingleProduct = createAsyncThunk(
   "product/getOne",
   async (id) => {
@@ -19,7 +17,6 @@ export const getSingleProduct = createAsyncThunk(
   }
 );
 
-//  ADD PRODUCT (admin)
 export const addProduct = createAsyncThunk(
   "product/add",
   async (data) => {
@@ -28,7 +25,6 @@ export const addProduct = createAsyncThunk(
   }
 );
 
-//  UPDATE PRODUCT
 export const updateProduct = createAsyncThunk(
   "product/update",
   async ({ id, data }) => {
@@ -37,7 +33,6 @@ export const updateProduct = createAsyncThunk(
   }
 );
 
-//  DELETE PRODUCT
 export const deleteProduct = createAsyncThunk(
   "product/delete",
   async (id) => {
@@ -59,7 +54,6 @@ const productSlice = createSlice({
   extraReducers: (builder) => {
     builder
 
-      //  GET ALL
       .addCase(getAllProducts.pending, (state) => {
         state.loading = true;
       })
@@ -68,7 +62,6 @@ const productSlice = createSlice({
         state.products = action.payload;
       })
 
-      //  GET SINGLE
       .addCase(getSingleProduct.pending, (state) => {
         state.loading = true;
       })
@@ -77,12 +70,10 @@ const productSlice = createSlice({
         state.singleProduct = action.payload;
       })
 
-      //  ADD
       .addCase(addProduct.fulfilled, (state, action) => {
         state.products.unshift(action.payload.data);
       })
 
-      //  UPDATE
       .addCase(updateProduct.fulfilled, (state, action) => {
         const index = state.products.findIndex(
           (item) => item._id === action.payload._id
@@ -92,7 +83,6 @@ const productSlice = createSlice({
         }
       })
 
-      // DELETE
       .addCase(deleteProduct.fulfilled, (state, action) => {
         state.products = state.products.filter(
           (item) => item._id !== action.payload
