@@ -27,7 +27,6 @@ export default function ProfilePage() {
     <div className="min-h-screen bg-background text-on-surface">
       <main className="max-w-5xl mx-auto space-y-4 md:space-y-7 px-4 sm:px-6 lg:px-0">
         <section className="flex flex-col items-center text-center rounded-3xl glass-card p-8 md:p-10">
-          <div className="w-20 h-20 rounded-full bg-gradient-futuristic border border-white/80 mb-4" />
           <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-wide">
             {user?.name || "No Name"}
           </h2>
