@@ -32,10 +32,7 @@ export default function ProcessSection() {
   return (
     <section className="w-full mx-auto my-10">
 
-      {/* TOP GRID */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-
-        {/* Main Card */}
         <div className="md:col-span-2 glass-card p-6 sm:p-8 rounded-3xl shadow-2xl shadow-black/20">
           <h3 className="text-2xl font-bold mb-4 text-on-surface">
             Immediate Confirmation
@@ -53,7 +50,6 @@ export default function ProcessSection() {
           </div>
         </div>
 
-        {/* Formats */}
         <div className="glass-card p-6 md:p-8 rounded-3xl shadow-2xl shadow-black/20">
           <h3 className="text-xl font-bold mb-4 text-on-surface">
             Universal Formats
@@ -68,24 +64,20 @@ export default function ProcessSection() {
         </div>
       </div>
 
-      {/* DEVICES GRID */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 ">
         {data.map((item, i) => (
           <div
             key={i}
             className="glass-card p-6 rounded-3xl shadow-sm hover:-translate-y-1 transition duration-300"
           >
-            {/* ICON */}
             <div className="mb-4 text-primary">
               {item.icon}
             </div>
 
-            {/* TITLE */}
             <h4 className="font-semibold text-lg mb-1">
               {item.title}
             </h4>
 
-            {/* DESC */}
             <p className="text-sm text-on-surface-variant leading-relaxed">
               {item.desc}
             </p>
