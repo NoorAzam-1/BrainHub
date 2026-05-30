@@ -5,7 +5,6 @@ export default function OrderCard({ type, status }) {
   return (
     <div className="rounded-3xl border border-white/60 glass-card p-4 sm:p-6 md:p-8 flex flex-col md:flex-row gap-6 md:gap-8 shadow-2xl shadow-black/10">
 
-      {/* Image */}
       <div className="w-full md:w-auto flex justify-center md:justify-start">
         {type === "stack" ? (
           <div className="w-[140px] h-[180px] sm:w-[160px] sm:h-[200px]">
@@ -23,10 +22,7 @@ export default function OrderCard({ type, status }) {
         )}
       </div>
 
-      {/* Content */}
       <div className="flex-1 flex flex-col justify-between">
-
-        {/* Top */}
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 mb-4">
 
           <div>
@@ -36,7 +32,6 @@ export default function OrderCard({ type, status }) {
             </p>
           </div>
 
-          {/* Status */}
           <div
             className={`text-[10px] sm:text-xs px-3 py-1 rounded-full border w-fit ${
               status === "completed"
@@ -48,19 +43,15 @@ export default function OrderCard({ type, status }) {
           </div>
         </div>
 
-        {/* Title */}
         <p className="font-semibold text-sm sm:text-base mb-2">
           The Gilded Architect
         </p>
 
-        {/* Price */}
         <p className="text-secondary font-bold text-base sm:text-lg mb-5">
           ₹124.50
         </p>
 
-        {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-
           <button className="w-full sm:w-auto btn btn-primary px-5 py-2.5 text-sm active:scale-95 transition">
             Download
           </button>
@@ -68,7 +59,6 @@ export default function OrderCard({ type, status }) {
           <button className="w-full sm:w-auto btn btn-ghost px-5 py-2.5 text-sm">
             View Details
           </button>
-
         </div>
 
       </div>
