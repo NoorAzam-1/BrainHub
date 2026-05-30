@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
 :root {
-  /* BrainHub palette (light SaaS) */
   --primary: 37 99 235; /* #2563EB */
   --primary-dark: 29 78 216; /* #1D4ED8 */
   --secondary: 14 165 233; /* #0EA5E9 */
