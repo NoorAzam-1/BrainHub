@@ -54,8 +54,8 @@ export default function CartPage() {
   return (
     <main className="w-full mx-auto min-h-screen">
       {/* Title */}
-      <header className="mb-12">
-        <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
+      <header className="mb-8 sm:mb-12">
+        <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
           Your Collection
         </h1>
         <p className="text-sm uppercase text-on-surface-variant mt-2">
@@ -63,9 +63,9 @@ export default function CartPage() {
         </p>
       </header>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
         {/* LEFT */}
-        <div className="lg:col-span-8 space-y-10">
+        <div className="lg:col-span-8 space-y-8 sm:space-y-10">
           {cart?.items?.map((item) => (
             <CartItem
               key={item.productId}
