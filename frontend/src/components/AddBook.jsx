@@ -20,16 +20,16 @@ export default function AddBook() {
     title: "",
     author: "",
     description: "",
-    format: "EPUB", // Updated for E-book schema
+    format: "EPUB",
     price: "",
-    category: "", // Will convert to Array on submit
-    tags: "", // Will convert to Array on submit
+    category: "",
+    tags: "",
     bestseller: false,
     available: true,
-    images: [], // Updated to array to match imageSchema
+    images: [],
   });
 
-  const [previews, setPreviews] = useState([]); // Array for multiple previews
+  const [previews, setPreviews] = useState([]);
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
@@ -61,7 +61,6 @@ export default function AddBook() {
       data.append("format", form.format);
       data.append("price", form.price);
 
-      // Convert comma-separated strings into Arrays for the schema
       if (form.category) {
         const categories = form.category
           .split(",")
@@ -81,10 +80,9 @@ export default function AddBook() {
       data.append("bestseller", form.bestseller);
       data.append("available", form.available);
 
-      // Append multiple images to match images: [imageSchema]
       form.images.forEach((img) => {
         data.append("images", img);
-        console.log(img)
+        console.log(img);
       });
 
       console.log("=== FORM DATA DEBUG ===");
@@ -93,7 +91,7 @@ export default function AddBook() {
       }
 
       await dispatch(addProduct(data)).unwrap();
-      toast.success("E-Book added successfully ✅");
+      toast.success("Book added successfully ✅");
 
       setForm({
         title: "",
@@ -119,7 +117,6 @@ export default function AddBook() {
   return (
     <div className="w-full">
       <form onSubmit={handleSubmit} className="space-y-5">
-        {/* HEADER */}
         <div>
           <h3 className="text-sm font-bold text-secondary uppercase tracking-wider">
             Add New E-Book
@@ -129,7 +126,6 @@ export default function AddBook() {
           </p>
         </div>
 
-        {/* IMAGE PREVIEWS */}
         {previews.length > 0 && (
           <div className="flex gap-3 justify-center flex-wrap">
             {previews.map((src, i) => (
@@ -145,9 +141,7 @@ export default function AddBook() {
           </div>
         )}
 
-        {/* GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {/* TITLE */}
           <InputField
             icon={<Book size={18} />}
             label="Title"
@@ -157,7 +151,6 @@ export default function AddBook() {
             required
           />
 
-          {/* AUTHOR */}
           <InputField
             icon={<User size={18} />}
             label="Author"
@@ -167,7 +160,6 @@ export default function AddBook() {
             required
           />
 
-          {/* CATEGORY (Comma Separated) */}
           <InputField
             icon={<Tag size={18} />}
             label="Categories (Comma Separated)"
@@ -178,7 +170,6 @@ export default function AddBook() {
             required
           />
 
-          {/* PRICE */}
           <InputField
             icon={<IndianRupee size={18} />}
             label="Price"
@@ -189,7 +180,6 @@ export default function AddBook() {
             required
           />
 
-          {/* FORMAT */}
           <div className="space-y-1">
             <label className="label">Format</label>
             <select
@@ -204,7 +194,6 @@ export default function AddBook() {
             </select>
           </div>
 
-          {/* TAGS (Comma Separated) */}
           <InputField
             icon={<Hash size={18} />}
             label="Tags (Comma Separated)"
@@ -214,7 +203,6 @@ export default function AddBook() {
             placeholder="e.g. bestseller, 2024"
           />
 
-          {/* IMAGES */}
           <div className="space-y-1">
             <label className="label">Book Images (Multiple)</label>
             <div className="relative group">
@@ -233,7 +221,6 @@ export default function AddBook() {
             </div>
           </div>
 
-          {/* DESCRIPTION FULL WIDTH */}
           <div className="md:col-span-2">
             <label className="label">Description</label>
             <textarea
@@ -270,7 +257,6 @@ export default function AddBook() {
           </label>
         </div>
 
-        {/* BUTTON */}
         <button
           type="submit"
           disabled={loading}
