@@ -25,7 +25,7 @@ export default function Footer() {
             skills faster with personalized learning paths and smart
             assessments.
           </p>
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-3">
             <a
               href="#"
               className="text-on-surface-variant hover:text-on-surface transition"
@@ -94,7 +94,7 @@ export default function Footer() {
       </div>
 
       <div className="mt-10 border-t border-border/30 pt-6">
-        <div className="mx-auto max-w-7xl px-6 text-sm text-on-surface-variant flex items-center justify-between">
+        <div className="mx-auto max-w-7xl px-6 text-sm text-on-surface-variant flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-center sm:text-left">
           <div>
             © {new Date().getFullYear()} {site.brand}
           </div>
