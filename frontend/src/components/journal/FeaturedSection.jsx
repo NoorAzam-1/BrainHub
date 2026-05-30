@@ -4,8 +4,6 @@ import Link from "next/link";
 export default function FeaturedSection() {
   return (
     <section className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
-
-      {/* Main Feature */}
       <div className="md:col-span-8 relative rounded-3xl overflow-hidden group aspect-[4/3] sm:aspect-[16/10] min-h-[320px] glass-card">
         <Image
           alt="image"
@@ -29,10 +27,7 @@ export default function FeaturedSection() {
         </div>
       </div>
 
-      {/* Side Cards (🔥 Improved) */}
       <div className="md:col-span-4 flex flex-col gap-4 sm:gap-6">
-
-        {/* Card 1 */}
         <div className="relative group rounded-3xl overflow-hidden aspect-[16/10] min-h-[190px] glass-card">
           <Image
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfnmJWFyyKxO7Ag6TH4G_VqH_Lf59s_-EekuFg540VUpKdAo1n7b7-JTcDSixX8P_c9Kw-OxDpNQJ2ZOEK-TJLe5Vca3tcUU7uXheQO0BM4SVqHLuLtjSRtioGY-hxZFy8MfXmtJKuQ4_RRyjVno6sZ_Rz_mPvxoULWacwkmgpBJoTEdSHnqxUmOipFRVR3UchT469-OJgVAMPDxnmJZlPfUigFrtV8WQ8mG0Ylb7lwxTR-YlXdONOjVseCfM88SwW7H3yWx52Vgs"
@@ -60,7 +55,6 @@ export default function FeaturedSection() {
           </div>
         </div>
 
-        {/* Card 2 */}
         <div className="relative group rounded-3xl overflow-hidden aspect-[16/10] min-h-[190px] glass-card">
           <Image
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZe2Rsg7bcsN8CGD3l9rpUHeJHSzI0rBXa21_kjmfHKXXVwGAChPaYZ4l_mzkRpguGuAJkm3_wtdtdPVNU5cVOv7v22WUM8F56CfKvgtQ50e35jcSbjD1zktRJUJkNqOODyJLVyGV5GI658wjHKmLVpdVGN-bm-jJYr9tjtyK3z6VpC8BtnO4i9lBwE5luKnHQNoPA1--INsQ6rvrp4DfYkmWdBXqHGOPugw0VwE_U610EzRizCveg-KQsnkn89oD4mXfjyfVRYfY"
