@@ -1,19 +1,16 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { axiosInstance } from "../utils/axios.js";
 
-// ADD
 export const addWishlist = createAsyncThunk("wishlist/add", async (data) => {
   const res = await axiosInstance.addWishlist(data);
   return res.data;
 });
 
-// GET ALL
 export const getWishlist = createAsyncThunk("wishlist/getAll", async () => {
   const res = await axiosInstance.getWishlist();
   return res.data.data;
 });
 
-// GET SINGLE
 export const getSingleWishlist = createAsyncThunk(
   "wishlist/getOne",
   async (id) => {
@@ -22,7 +19,6 @@ export const getSingleWishlist = createAsyncThunk(
   },
 );
 
-// DELETE
 export const deleteWishlist = createAsyncThunk(
   "wishlist/delete",
   async (id) => {
@@ -35,15 +31,13 @@ const wishlistSlice = createSlice({
   name: "wishlist",
   initialState: {
     wishlist: [],
-    singleWishlist: null, // 👈 important
+    singleWishlist: null,
     loading: false,
   },
   reducers: {},
 
   extraReducers: (builder) => {
     builder
-
-      // GET ALL
       .addCase(getWishlist.pending, (state) => {
         state.loading = true;
       })
@@ -52,7 +46,6 @@ const wishlistSlice = createSlice({
         state.wishlist = action.payload;
       })
 
-      // GET SINGLE
       .addCase(getSingleWishlist.pending, (state) => {
         state.loading = true;
       })
@@ -61,7 +54,6 @@ const wishlistSlice = createSlice({
         state.singleWishlist = action.payload;
       })
 
-      // ADD
       .addCase(addWishlist.fulfilled, (state, action) => {
         if (!state.wishlist) {
           state.wishlist = [];
@@ -72,7 +64,6 @@ const wishlistSlice = createSlice({
         }
       })
 
-      //  DELETE
       .addCase(deleteWishlist.fulfilled, (state, action) => {
         state.wishlist = state.wishlist.filter(
           (item) => item._id !== action.payload,
