@@ -6,8 +6,6 @@ export default function ShippingForm({ data, setData, errors }) {
       </h2>
 
       <div className="space-y-5">
-
-        {/* FULL NAME */}
         <div>
           <input
             placeholder="Full Name"
@@ -22,7 +20,6 @@ export default function ShippingForm({ data, setData, errors }) {
           )}
         </div>
 
-        {/* EMAIL */}
         <div>
           <input
             type="email"
@@ -38,7 +35,6 @@ export default function ShippingForm({ data, setData, errors }) {
           )}
         </div>
 
-        {/* PHONE */}
         <div>
           <input
             type="tel"
@@ -54,7 +50,6 @@ export default function ShippingForm({ data, setData, errors }) {
           )}
         </div>
 
-        {/* ADDRESS */}
         <div>
           <input
             placeholder="Street Address"
@@ -69,9 +64,7 @@ export default function ShippingForm({ data, setData, errors }) {
           )}
         </div>
 
-        {/* CITY + STATE */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-
           <div>
             <input
               placeholder="City"
@@ -99,10 +92,8 @@ export default function ShippingForm({ data, setData, errors }) {
               <p className="text-error text-xs mt-1">{errors.state}</p>
             )}
           </div>
-
         </div>
 
-        {/* ZIP */}
         <div>
           <input
             placeholder="ZIP Code"
