@@ -97,7 +97,6 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* CENTER */}
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
             {navLinks.map((link) => (
               <Link
@@ -114,7 +113,6 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* RIGHT */}
           <div className="flex items-center gap-4 relative">
             {isLoggedIn ? (
               <div
@@ -127,10 +125,8 @@ export default function Header() {
                   onClick={() => setProfileOpen((prev) => !prev)}
                 />
 
-                {/* DROPDOWN */}
                 {profileOpen && (
                   <div className="absolute -right-6 md:-right-10 lg:-right-12 xl:-right-20 top-6 w-52 glass-card rounded-3xl shadow-2xl z-50 backdrop-blur-2xl border border-white/70">
-                    {/* LINKS */}
                     <div className="py-2 text-sm">
                       <Link
                         href="/profile"
@@ -165,7 +161,6 @@ export default function Header() {
                       </Link>
                     </div>
 
-                    {/* LOGOUT */}
                     <div className="border-t border-border/40 mt-2 pt-2">
                       <button
                         onClick={logout}
@@ -192,7 +187,6 @@ export default function Header() {
               </div>
             )}
 
-            {/* CART */}
             {isLoggedIn && (
               <Link href="/cart" className="relative">
                 <ShoppingCart className="h-6 w-6 text-on-surface" />
@@ -208,7 +202,6 @@ export default function Header() {
         </div>
       </header>
 
-      {/* MOBILE MENU */}
       <div
         className={`fixed top-0 left-0 h-full w-64 glass-card shadow-2xl border-r border-border/50 transform transition-transform duration-300 z-50 ${
           open ? "translate-x-0" : "-translate-x-full"
