@@ -44,12 +44,10 @@ export default function LoginPage() {
     setLoading(false);
   };
 
-
   return (
     <div className="text-on-surface flex justify-center items-center min-h-screen w-full px-4 py-8">
       <Toaster position="top-right" reverseOrder={false} />
       <div className="w-full max-w-md z-10">
-        {/* HEADING */}
         <div className="text-center mb-6">
           <h2 className="text-3xl font-bold mb-2">Welcome Back</h2>
           <p className="text-on-surface-variant text-sm">
@@ -57,10 +55,8 @@ export default function LoginPage() {
           </p>
         </div>
 
-        {/* CARD */}
         <div className="glass-card p-4 md:p-6 rounded-3xl border border-white/60 shadow-2xl shadow-black/10">
           <form onSubmit={handleSubmit} className="space-y-4">
-            {/* EMAIL */}
             <InputField
               icon={<Mail size={18} />}
               label="Email Address"
@@ -70,7 +66,6 @@ export default function LoginPage() {
               onChange={handleChange}
             />
 
-            {/* PASSWORD */}
             <InputField
               icon={<Lock size={18} />}
               label="Password"
@@ -81,7 +76,6 @@ export default function LoginPage() {
               onChange={handleChange}
             />
 
-            {/* FORGOT PASSWORD */}
             <div className="text-right text-sm">
               <Link
                 href="/forgot_password"
@@ -91,18 +85,16 @@ export default function LoginPage() {
               </Link>
             </div>
 
-            {/* BUTTON */}
             <button
               type="submit"
               disabled={loading}
-              className="w-full btn btn-primary flex items-center justify-center gap-2 py-3 rounded-2xl disabled:opacity-60"
+              className="w-full btn btn-primary flex items-center justify-center gap-2 py-3 rounded-2xl disabled:opacity-60 cursor-pointer"
             >
               {loading ? "Signing in..." : "Sign In"} <ArrowRight size={18} />
             </button>
           </form>
         </div>
 
-        {/* FOOT TEXT */}
         <p className="text-center text-sm text-on-surface-variant mt-6">
           Don’t have an account?{" "}
           <Link href="/register" className="text-primary font-semibold">
@@ -117,19 +109,16 @@ export default function LoginPage() {
 function InputField({ icon, label, ...props }) {
   return (
     <div className="space-y-2">
-          <label className="text-[11px] uppercase tracking-widest text-secondary font-bold ml-1">
+      <label className="text-[11px] uppercase tracking-widest text-secondary font-bold ml-1">
         {label}
       </label>
 
       <div className="relative group">
-        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant group-focus-within:text-primary transition">
+        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant group-focus-within:text-red-600 transition">
           {icon}
         </span>
 
-        <input
-          {...props}
-          className="input"
-        />
+        <input {...props} className="input" />
       </div>
     </div>
   );
