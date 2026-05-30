@@ -72,20 +72,22 @@ export default function CheckoutPage() {
   };
 
   return (
-    <main className="max-w-4xl mx-auto bg-surface text-on-surface rounded-3xl overflow-hidden border border-white/60 shadow-2xl shadow-black/10">
+    <main className="w-full max-w-4xl mx-auto bg-surface text-on-surface rounded-3xl overflow-hidden border border-white/60 shadow-2xl shadow-black/10">
       <ProgressSteps step={step} />
 
-      {step === 1 && <OrderSummary />}
+      <div className="px-4 py-2 sm:px-6 md:px-8">
+        {step === 1 && <OrderSummary />}
 
-      {step === 2 && (
-        <ShippingForm data={shipping} setData={setShipping} errors={errors} />
-      )}
+        {step === 2 && (
+          <ShippingForm data={shipping} setData={setShipping} errors={errors} />
+        )}
 
-      {step === 3 && (
-        <PaymentMethod data={payment} setData={setPayment} errors={errors} />
-      )}
+        {step === 3 && (
+          <PaymentMethod data={payment} setData={setPayment} errors={errors} />
+        )}
 
-      {step === 4 && <SuccessScreen />}
+        {step === 4 && <SuccessScreen />}
+      </div>
 
       {/* BUTTON */}
       {step < 4 && (
