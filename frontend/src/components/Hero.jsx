@@ -63,7 +63,7 @@ export default function Hero() {
 
               <div className="flex flex-col gap-4 pt-2 sm:flex-row sm:items-center">
                 <button
-                    className="btn btn-primary w-full gap-2 px-8 py-4 shadow-lg shadow-primary/20 sm:w-auto"
+                    className="btn btn-primary w-full gap-2 px-8 py-4 shadow-lg shadow-primary/20 cursor-pointer sm:w-auto"
                   onClick={handleBuyNow}
                 >
                   Buy Now — ₹{site.hero.price.toFixed(0)}
