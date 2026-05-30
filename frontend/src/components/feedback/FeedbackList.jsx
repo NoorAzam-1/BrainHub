@@ -24,14 +24,12 @@ export default function FeedbackList() {
 
   return (
     <div className="max-w-3xl mx-auto mt-8 md:mt-10">
-      {/* FORM */}
       <FeedbackForm
         key={editData?._id || "new-feedback"}
         editData={editData}
         setEditData={setEditData}
       />
 
-      {/* LIST */}
       <div className="mb-4 flex items-center justify-between">
         <h3 className="text-lg md:text-xl font-bold text-on-surface">Recent Feedback</h3>
         <span className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 font-semibold">
