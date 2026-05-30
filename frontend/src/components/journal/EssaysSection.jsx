@@ -45,7 +45,6 @@ export default function EssaysSection() {
             key={i}
             className="flex flex-col md:flex-row gap-5 sm:gap-8 group border-b border-border/30 pb-8 sm:pb-10"
           >
-            {/* Image */}
             <div className="relative w-full md:w-1/3 h-[220px] sm:h-[240px] md:h-[220px] overflow-hidden rounded-2xl">
               <Image
                 src={essay.image}
@@ -55,25 +54,20 @@ export default function EssaysSection() {
               />
             </div>
 
-            {/* Content */}
             <div className="flex-1">
-              {/* Meta */}
               <div className="flex flex-wrap items-center gap-4 text-xs uppercase tracking-widest mb-3">
                 <span className="text-primary">{essay.category}</span>
                 <span className="text-on-surface-variant">{essay.date}</span>
               </div>
 
-              {/* Title */}
               <h3 className="text-2xl md:text-3xl font-bold mb-3 group-hover:text-primary transition">
                 {essay.title}
               </h3>
 
-              {/* Description */}
               <p className="text-on-surface-variant mb-4">
                 {essay.description}
               </p>
 
-              {/* Author */}
               <p className="text-sm text-on-surface-variant">
                 By {essay.author}
               </p>
