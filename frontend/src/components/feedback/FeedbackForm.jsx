@@ -1,24 +1,20 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { addFeedback, updateFeedback } from "@/features/feedbackSlice";
 
 export default function FeedbackForm({ editData, setEditData }) {
   const dispatch = useDispatch();
 
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    contactNo: "",
-    feedback: "",
+  const [form, setForm] = useState(() => {
+    return {
+      name: editData?.name || "",
+      email: editData?.email || "",
+      contactNo: editData?.contactNo || "",
+      feedback: editData?.feedback || "",
+    };
   });
-
-  useEffect(() => {
-    if (editData) {
-      setForm(editData);
-    }
-  }, [editData]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
