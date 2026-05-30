@@ -18,11 +18,11 @@ export default function AccessSection() {
 
   return (
     <section className="mx-auto my-5 md:my-10">
-      <div className="grid md:grid-cols-2 rounded-3xl overflow-hidden shadow-2xl shadow-black/10 border border-white/60">
+      <div className="grid grid-cols-1 md:grid-cols-2 rounded-3xl overflow-hidden shadow-2xl shadow-black/10 border border-white/60">
 
         {/* LEFT SIDE */}
         <div className="glass-card p-6 md:p-12">
-          <h3 className="text-3xl font-bold mb-10 text-on-surface">
+          <h3 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-10 text-on-surface">
             Accessing Your Purchase
           </h3>
 
@@ -52,7 +52,7 @@ export default function AccessSection() {
         {/* RIGHT SIDE */}
         <div className="bg-linear-to-br from-primary/15 via-secondary/10 to-accent/10 flex items-center justify-center p-6 md:p-8">
           
-          <div className="glass-card p-8 rounded-3xl shadow-xl w-full max-w-sm text-center border border-white/60">
+          <div className="glass-card p-6 sm:p-8 rounded-3xl shadow-xl w-full max-w-sm text-center border border-white/60">
 
             <h4 className="text-xl font-semibold mb-4 text-on-surface">
               Ready to start reading?
