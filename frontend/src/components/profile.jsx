@@ -158,7 +158,6 @@ function PersonalInfo({ user }) {
 }
 
 function OrderHistory() {
-  // Mock data representing E-book orders based on new schema
   const orders = [
     { id: "#ORD123", book: "Atomic Habits (EPUB)", price: "₹299" },
     { id: "#ORD124", book: "Deep Work (PDF)", price: "₹399" },
