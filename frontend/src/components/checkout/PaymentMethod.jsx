@@ -76,7 +76,7 @@ export default function PaymentMethod({ data, setData, errors }) {
             </div>
 
             {/* EXPIRY + CVV */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <input
                   placeholder="MM/YY"
@@ -107,7 +107,7 @@ export default function PaymentMethod({ data, setData, errors }) {
 
       {/* 📱 UPI FORM */}
       {data.method === "upi" && (
-        <div className="glass-card p-5 rounded-2xl border border-border/70 space-y-4">
+        <div className="glass-card p-4 sm:p-5 rounded-2xl border border-border/70 space-y-4">
           <div className="text-sm text-on-surface-variant">
             Pay using UPI (Google Pay, PhonePe, Paytm)
           </div>
@@ -125,7 +125,7 @@ export default function PaymentMethod({ data, setData, errors }) {
           </div>
 
           {/* FAKE APPS */}
-          <div className="flex gap-3 text-xs text-on-surface-variant">
+          <div className="flex flex-wrap gap-3 text-xs text-on-surface-variant">
             <span className="px-3 py-1 rounded-full bg-surface-light border border-white/60">
               GPay
             </span>
