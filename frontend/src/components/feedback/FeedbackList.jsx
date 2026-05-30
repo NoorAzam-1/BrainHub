@@ -25,7 +25,11 @@ export default function FeedbackList() {
   return (
     <div className="max-w-3xl mx-auto mt-8 md:mt-10">
       {/* FORM */}
-      <FeedbackForm editData={editData} setEditData={setEditData} />
+      <FeedbackForm
+        key={editData?._id || "new-feedback"}
+        editData={editData}
+        setEditData={setEditData}
+      />
 
       {/* LIST */}
       <div className="mb-4 flex items-center justify-between">
