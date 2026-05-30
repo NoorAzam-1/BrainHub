@@ -36,7 +36,7 @@ export default function ProcessSection() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
 
         {/* Main Card */}
-        <div className="md:col-span-2 glass-card p-8 rounded-3xl shadow-2xl shadow-black/20">
+        <div className="md:col-span-2 glass-card p-6 sm:p-8 rounded-3xl shadow-2xl shadow-black/20">
           <h3 className="text-2xl font-bold mb-4 text-on-surface">
             Immediate Confirmation
           </h3>
@@ -45,7 +45,7 @@ export default function ProcessSection() {
             Within seconds of checkout, you&apos;ll receive a secure link in your inbox. No physical parcels, no transit delays, just your library growing instantly.
           </p>
 
-          <div className="mt-8 border-t pt-4 flex justify-between items-center">
+          <div className="mt-8 border-t pt-4 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
             <span className="text-primary text-xs uppercase tracking-wide">
               Average Delivery Time
             </span>
