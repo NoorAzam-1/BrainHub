@@ -12,7 +12,7 @@ export default function RecentBook() {
           width={300}
           className="w-40 sm:w-48 h-64 object-cover rounded shadow-xl"
         />
-      </div>{" "}
+      </div>
       <div>
         <p className="text-xs text-on-surface-variant">4 Days Ago</p>
         <h3 className="text-xl font-bold mt-1">Meditations</h3>
