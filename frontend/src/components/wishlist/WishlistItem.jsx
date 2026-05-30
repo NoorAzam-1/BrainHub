@@ -36,8 +36,6 @@ export default function WishlistItem({
   return (
     <>
       <div className="group relative flex flex-col md:flex-row gap-5 sm:gap-6 p-4 rounded-3xl glass-card border border-white/60 hover:border-primary/20 transition shadow-2xl shadow-black/10">
-        
-        {/* Image */}
         <div className="relative w-full md:w-40 aspect-2/3 overflow-hidden rounded-2xl shadow-xl shrink-0 border border-white/60">
           <Image
             alt="Image"
@@ -47,10 +45,7 @@ export default function WishlistItem({
           />
         </div>
 
-        {/* Content */}
         <div className="flex flex-col justify-between flex-1 py-2">
-          
-          {/* Top */}
           <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3">
             <div>
               <h3 className="text-xl md:text-2xl font-headline font-bold text-on-surface group-hover:text-primary">
@@ -59,7 +54,6 @@ export default function WishlistItem({
               <p className="text-sm text-on-surface-variant">{author}</p>
             </div>
 
-            {/* DELETE BUTTON */}
             <button
               onClick={handleDelete}
               className="text-error hover:text-red-600 cursor-pointer transition text-xl"
@@ -68,7 +62,6 @@ export default function WishlistItem({
             </button>
           </div>
 
-          {/* Bottom */}
           <div className="mt-4 flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
               <p className="text-primary text-xl font-bold">
@@ -79,7 +72,6 @@ export default function WishlistItem({
               </p>
             </div>
 
-            {/* 🛒 MOVE TO CART */}
             <button
               onClick={handleMoveToCart}
               disabled={loading}
@@ -91,7 +83,6 @@ export default function WishlistItem({
         </div>
       </div>
 
-      {/* ✅ TOAST */}
       {toast && (
         <div className="fixed bottom-6 right-6 glass-card text-on-surface px-4 py-2 rounded-xl shadow-lg z-50">
           {toast}
