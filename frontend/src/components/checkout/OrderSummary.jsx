@@ -28,7 +28,6 @@ export default function OrderSummary() {
       <h2 className="text-xl font-bold uppercase mb-6 text-on-surface">Order Summary</h2>
 
       <div className="space-y-6">
-        {/* ITEMS */}
         {items.map((i) => {
           const { productId, title, image, price, quantity } = i;
 
@@ -62,7 +61,6 @@ export default function OrderSummary() {
           );
         })}
 
-        {/* TOTAL SECTION */}
         <div className="border-t border-border/40 pt-4 space-y-2">
           <div className="flex justify-between text-on-surface-variant">
             <span>Subtotal</span>
