@@ -2,7 +2,6 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { axiosInstance } from "@/utils/axios";
 import toast from "react-hot-toast";
 
-// ================= USERS =================
 export const getAllUsers = createAsyncThunk(
   "admin/getAllUsers",
   async (_, { rejectWithValue }) => {
@@ -17,7 +16,6 @@ export const getAllUsers = createAsyncThunk(
   }
 );
 
-// ================= SELLERS =================
 export const getSellers = createAsyncThunk(
   "admin/getSellers",
   async (_, { rejectWithValue }) => {
@@ -32,7 +30,6 @@ export const getSellers = createAsyncThunk(
   }
 );
 
-// ================= DELETE USER =================
 export const deleteUser = createAsyncThunk(
   "admin/deleteUser",
   async (id, { rejectWithValue }) => {
@@ -49,7 +46,6 @@ export const deleteUser = createAsyncThunk(
   }
 );
 
-// ================= SLICE =================
 const adminSlice = createSlice({
   name: "admin",
   initialState: {
@@ -63,8 +59,6 @@ const adminSlice = createSlice({
 
   extraReducers: (builder) => {
     builder
-
-      // ================= USERS =================
       .addCase(getAllUsers.pending, (state) => {
         state.loading = true;
         state.error = null;
@@ -78,7 +72,6 @@ const adminSlice = createSlice({
         state.error = action.payload;
       })
 
-      // ================= SELLERS =================
       .addCase(getSellers.pending, (state) => {
         state.loading = true;
         state.error = null;
@@ -92,14 +85,12 @@ const adminSlice = createSlice({
         state.error = action.payload;
       })
 
-      // ================= DELETE =================
       .addCase(deleteUser.pending, (state) => {
         state.loading = true;
       })
       .addCase(deleteUser.fulfilled, (state, action) => {
         state.loading = false;
 
-        // remove from both lists
         state.users = state.users.filter(
           (u) => u._id !== action.payload
         );
