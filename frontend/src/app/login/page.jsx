@@ -46,7 +46,7 @@ export default function LoginPage() {
 
 
   return (
-    <div className="text-on-surface flex justify-center items-center min-h-screen w-full ">
+    <div className="text-on-surface flex justify-center items-center min-h-screen w-full px-4 py-8">
       <Toaster position="top-right" reverseOrder={false} />
       <div className="w-full max-w-md z-10">
         {/* HEADING */}
@@ -95,7 +95,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full btn btn-primary flex items-center justify-center gap-2 disabled:opacity-60"
+              className="w-full btn btn-primary flex items-center justify-center gap-2 py-3 rounded-2xl disabled:opacity-60"
             >
               {loading ? "Signing in..." : "Sign In"} <ArrowRight size={18} />
             </button>
